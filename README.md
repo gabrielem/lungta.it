@@ -1,3 +1,4 @@
+<tt>
                                                
 e     e   e eeeee eeeee eeeee eeeee    e eeeee
 8     8   8 8   8 8   8   8   8   8    8   8   
@@ -5,6 +6,7 @@ e     e   e eeeee eeeee eeeee eeeee    e eeeee
 88    88  8 88  8 88 "8   88  88  8    88  88  
 88eee 88ee8 88  8 88ee8   88  88  8 88 88  88  
 
+</tt>
 --------
  www.lungta.it - Charity Project For Preserve Tibetan Culture 
 
