@@ -1,0 +1,54 @@
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+
+}
+
+.hero-unit {
+    
+    width: 100%;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    padding: 10px 10px 10px 30px;
+    color:#0088cc;
+    background-image:url('../images/bg-hero.png');
+    background-repeat:no-repeat;
+    background-position:right bottom;
+}
+
+.hero-unit h1 {
+    font-size: 80px;
+    line-height: 1;
+    letter-spacing: -1px;
+    color:#0088cc;
+    font-family: 'Lily Script One', cursive;
+}
+.hero-unit h2 {
+
+font-family: 'Annie Use Your Telescope', cursive;
+}
+.nav > li > a {
+  text-decoration: none;
+  background-color: #88bbff;
+  color:#ffffff;
+}
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #0088cc;
+}
+
+
+#mainContent{}
+#mainContent h2{
+    font-family: 'Lily Script One', cursive;
+    /*font-family: 'Annie Use Your Telescope', cursive;*/
+
+}
+
+
+#sidebar{}
+#sidebar h2{font-size:25px;font-family: 'Annie Use Your Telescope', cursive;}
