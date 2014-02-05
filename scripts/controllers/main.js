@@ -12,6 +12,11 @@ angular.module('angularApp')
 	
 	$scope.pages_en = [
 		{
+			title:'Home',
+			url:'',
+			text:'...'
+		},
+      	{
 			title:'Preservation of Tibetan Culture',
 			url:'PreservationTibetanCulture',
 			text:'...'
