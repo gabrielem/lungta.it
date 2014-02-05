@@ -52,3 +52,23 @@ font-family: 'Annie Use Your Telescope', cursive;
 
 #sidebar{}
 #sidebar h2{font-size:25px;font-family: 'Annie Use Your Telescope', cursive;}
+
+
+.boxBuy-show-setup, .boxBuy-hide-setup {
+  -webkit-transition:all linear 0.3s;
+  -moz-transition:all linear 0.3s;
+  -ms-transition:all linear 0.3s;
+  -o-transition:all linear 0.3s;
+  transition:all linear 0.3s;
+}
+.boxBuy-show-setup { opacity:0; height: 0; }
+.boxBuy-show-setup.boxBuy-show-start { opacity:1; height: 100px; }
+
+.boxBuy-hide-setup { opacity:1; height: 0; }
+.boxBuy-hide-setup.boxBuy-hide-start { opacity:0; height: 100px; }
+
+
+#cartMini{
+    min-height:100px;
+    background-color:#efefef;
+}

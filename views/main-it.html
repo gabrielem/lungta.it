@@ -11,10 +11,15 @@
 	<br><br>
 	Cost: 5 euros for Lungta's Set
 	<br><br>
-	<button class="btn btn-large btn-primary" type="button">
+	<button  ng-show="!showBuyThis" class="btn btn-large btn-primary" type="button" ng-click="showBuyThis = ! showBuyThis">
 		<i class="icon-shopping-cart icon-white"></i> Buy Now
 	</button>
-	<br><br>
+	
+	<div ng-show="showBuyThis" ng-click="showBuyThis = ! showBuyThis" ng-animate="'boxBuy'" id="cartMini">
+		Buy Now!!!
+	</div>
+
+
 
   </div>
   <div class="span4" id="sidebar">
