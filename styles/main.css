@@ -86,7 +86,13 @@ padding:5px;
 }
 
 #cartMini .product{
-
+  margin:9px;
+  border:1px solid #afafaf;
+  padding:15px;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 

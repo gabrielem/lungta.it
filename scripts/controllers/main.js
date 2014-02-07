@@ -24,47 +24,37 @@ angular.module('angularApp')
 		{
 			title:'Home',
 			url:'',
-			text:'...'
 		},
       	{
 			title:'Preservation of Tibetan Culture',
-			url:'PreservationTibetanCulture',
-			text:'...'
+			url:'en/PreservationTibetanCulture',
 		},
       	{
 			title:'Lungta Tradition',
-			url:'LungtaTradition',
-			text:'...'
+			url:'en/LungtaTradition',
 		},
 		{
 			title:'Contacts',
-			url:'Contacts',
-			text:'...'
+			url:'en/Contacts',
 		},
     ];
-    
-    
 
     $scope.pages_it = [
 		{
 			title:'Home',
 			url:'',
-			text:'...'
 		},
       	{
 			title:'Preservare la Cultura TIbetana',
 			url:'PreservationTibetanCulture',
-			text:'...'
 		},
       	{
 			title:'La Tradizione delle Lungta ',
 			url:'LungtaTradition',
-			text:'...'
 		},
 		{
 			title:'Contatti',
 			url:'Contacts',
-			text:'...'
 		},
     ];
 
