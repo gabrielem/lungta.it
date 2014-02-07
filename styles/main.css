@@ -71,6 +71,7 @@ font-family: 'Annie Use Your Telescope', cursive;
 #cartMini{
     min-height:100px;
     background-color:#efefef;
+    padding:9px;
 }
 
 #cartMini i.close{
@@ -86,13 +87,14 @@ padding:5px;
 }
 
 #cartMini .product{
-  margin:9px;
+  margin:9px 9px 21px 9px;
   border:1px solid #afafaf;
   padding:15px;
   text-align: center;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+  background-color: #ffffff;
 }
 
 
