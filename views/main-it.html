@@ -1,0 +1,43 @@
+
+<div ng-include src="'views/nav/it.html'"></div>
+
+
+<div class="row">
+  <div class="span8" id="mainContent">
+	<h2>Buy your Lungta in Pharping</h2>
+	The flags will be put up for you in Pharping,<br>
+	to bring you good fortune and <br>
+	blessings for the New Year.<br>
+	<br><br>
+	Cost: 5 euros for Lungta's Set
+	<br><br>
+	<button  ng-show="!showBuyThis" class="btn btn-large btn-primary" type="button" ng-click="showBuyThis = ! showBuyThis">
+		<i class="icon-shopping-cart icon-white"></i> Buy Now
+	</button>
+	
+	<div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
+		<i class="close" ng-click="showBuyThis = ! showBuyThis">close</i>
+		<br>
+		<div class="product">
+			Please,<br>
+			Select the number of Flag<br>
+			to perofrm your Donation
+			<br>
+		<select type="text" ng-model="qta">
+			<option ng-repeat="n in range(5)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
+			
+		</select>
+		<span class="total">{{qta*5}}</span>
+		</div>
+	</div>
+
+
+
+  </div>
+  <div class="span4" id="sidebar">
+  	<div ng-include src="'views/side/en.html'"></div>
+  	
+
+  </div>
+  
+</div>

@@ -9,11 +9,13 @@ angular.module('angularApp', [
     $routeProvider
       .when('/', {
         templateUrl: 'views/main-en.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        lang_sel:'en'
       })
       .when('/it/', {
         templateUrl: 'views/main-it.html',
-        controller: 'MainCtrl'
+        controller: 'MainCtrl',
+        lang_sel:'it'
       })
       .otherwise({
         redirectTo: '/'
