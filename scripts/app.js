@@ -8,7 +8,7 @@ angular.module('angularApp', [
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
+        templateUrl: 'views/main-en.html',
         controller: 'MainCtrl'
       })
       .when('/it/', {

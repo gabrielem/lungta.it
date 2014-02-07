@@ -9,7 +9,15 @@ angular.module('angularApp')
       'Karma'
     ];
 
+	$scope.qta=1;
 	
+	$scope.range = function(n) {
+		var foo = [];
+        for (var i = 1; i <= n; i++)
+   		foo.push(i);
+        	return foo;
+    };
+
 	$scope.pages_en = [
 		{
 			title:'Home',
@@ -36,3 +44,4 @@ angular.module('angularApp')
     
 
   }]);
+

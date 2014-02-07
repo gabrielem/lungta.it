@@ -15,8 +15,20 @@
 		<i class="icon-shopping-cart icon-white"></i> Buy Now
 	</button>
 	
-	<div ng-show="showBuyThis" ng-click="showBuyThis = ! showBuyThis" ng-animate="'boxBuy'" id="cartMini">
-		Buy Now!!!
+	<div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
+		<i class="close" ng-click="showBuyThis = ! showBuyThis">close</i>
+		<br>
+		<div class="product">
+			Please,<br>
+			Select the number of Flag<br>
+			to perofrm your Donation
+			<br>
+		<select type="text" ng-model="qta">
+			<option ng-repeat="n in range(5)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
+			
+		</select>
+		<span class="total">{{qta*5}}</span>
+		</div>
 	</div>
 
 
