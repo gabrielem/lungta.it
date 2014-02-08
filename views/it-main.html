@@ -19,21 +19,45 @@
 		<i class="close" ng-click="showBuyThis = ! showBuyThis">close</i>
 		<br>
 		<div class="product">
-			Please,<br>
-			Select the number of Flag<br>
-			to perofrm your Donation
+			Bene,<br>
+			Imposta il numero di Lungta che vuoi<br>
+			e completa la tua donazione.
 			<br>
-		<select type="text" ng-model="qta">
-			<option ng-repeat="n in range(5)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
+		<select type="text" ng-model="qta" name="qtaFlag">
+			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
 			
 		</select>
-		<span class="total">{{qta*5}}</span>
+		<span class="total">{{qta*5}} euro</span>
+			
+			<form>
+			<div id="datiDonatore">
+				<div class="riga">
+					<div class="txt">Nome</div>
+					<div class="field"><input class="dati" type="text" name="nome" required></div>
+					<div style="clear:both;"></div>
+				</div>
+
+				<div class="riga">
+					<div class="txt">Cognome</div>
+					<div class="field"><input class="dati" type="text" name="cognome" required></div>
+					<div style="clear:both;"></div>
+				</div>
+
+				<div class="riga">
+					<div class="txt">E-mail</div>
+					<div class="field"><input class="dati" type="email" name="email" required></div>
+					<div style="clear:both;"></div>
+				</div>
+
+			</div>
 
 			<div>
-				<button  class="btn btn-large btn-primary" type="button" ng-click="doBuy">
-				<i class="icon-shopping-cart icon-white"></i> Buy Now
+				<button type="submit"  class="btn btn-large btn-primary" type="button" ng-click="doBuy">
+				<i class="icon-shopping-cart icon-white"></i> Clicca e Dona!
 				</button>
 			</div>
+			</form>
+
 		</div>
 	</div>
 

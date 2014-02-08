@@ -23,7 +23,7 @@ angular.module('angularApp')
 	$scope.pages_en = [
 		{
 			title:'Home',
-			url:'',
+			url:'en',
 		},
       	{
 			title:'Preservation of Tibetan Culture',
@@ -42,19 +42,19 @@ angular.module('angularApp')
     $scope.pages_it = [
 		{
 			title:'Home',
-			url:'',
+			url:'it',
 		},
       	{
 			title:'Preservare la Cultura TIbetana',
-			url:'PreservationTibetanCulture',
+			url:'it/PreservationTibetanCulture',
 		},
       	{
 			title:'La Tradizione delle Lungta ',
-			url:'LungtaTradition',
+			url:'it/LungtaTradition',
 		},
 		{
 			title:'Contatti',
-			url:'Contacts',
+			url:'it/Contacts',
 		},
     ];
 

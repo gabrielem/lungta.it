@@ -24,10 +24,17 @@
 			to perofrm your Donation
 			<br>
 		<select type="text" ng-model="qta">
-			<option ng-repeat="n in range(5)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
+			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
 			
 		</select>
-		<span class="total">{{qta*5}}</span>
+		<span class="total">{{qta*5}} euros</span>
+
+			<div>
+				<button  class="btn btn-large btn-primary" type="button" ng-click="doBuy">
+				<i class="icon-shopping-cart icon-white"></i> Click to Buy!
+				</button>
+			</div>
+
 		</div>
 	</div>
 

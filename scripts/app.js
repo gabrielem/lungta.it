@@ -3,9 +3,10 @@
 angular.module('angularApp', [
   'ngCookies',
   'ngResource',
-  'ngSanitize'
+  'ngSanitize',
+  'mgcrea.ngStrap'
 ])
-  .config(function ($routeProvider) {
+  .config(['$routeProvider',function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/en-main.html',
@@ -33,8 +34,24 @@ angular.module('angularApp', [
         controller: 'MainCtrl',
         lang_sel:'it'
       })
+      .when('/it/PreservationTibetanCulture/', {
+        templateUrl: 'views/it-PreservationTibetanCulture.html',
+        controller: 'MainCtrl',
+        lang_sel:'it'
+      })
+      .when('/it/LungtaTradition/', {
+        templateUrl: 'views/it-LungtaTradition.html',
+        controller: 'MainCtrl',
+        lang_sel:'it'
+      })
+      .when('/it/Contacts/', {
+        templateUrl: 'views/it-Contacts.html',
+        controller: 'MainCtrl',
+        lang_sel:'it'
+      })
+
       .otherwise({
         redirectTo: '/'
       });
-  });
+  }]);
 
