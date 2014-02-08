@@ -1,61 +1,54 @@
 
-<div ng-include src="'views/nav/en.html'"></div>
+<div ng-include src="'views/nav/ru.html'"></div>
 
 
 <div class="row">
   <div class="span8" id="mainContent">
-	<h2>Buy your Lungta in Pharping</h2>
-	The flags will be put up for you in Pharping,<br>
-	to bring you good fortune and <br>
-	blessings for the New Year.<br>
-	<br><br>
-	Cost: 5 euros for Lungta's Set
-	<br>
-	(One set is made by 5 flags).
+	<h2>Флажки будут развешаны на горе Парпинг для вас!</h2>
+	Каждый флаг стоит 1 евро, 1 комплект состоит из 5 флагов, <br />
+	и <b> минимальный заказ состоит из пяти флагов </b> (1 набор).
 	<br><br>
 	<button  ng-show="!showBuyThis" class="btn btn-large btn-primary" type="button" ng-click="showBuyThis = ! showBuyThis">
-		<i class="icon-shopping-cart icon-white"></i> Make Donation!
+		<i class="icon-shopping-cart icon-white"></i> Заказать сейчас
 	</button>
 	
 	<div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
-		<i class="close" ng-click="showBuyThis = ! showBuyThis">close</i>
+		<i class="close" ng-click="showBuyThis = ! showBuyThis">близко</i>
 		<br>
 		<div class="product">
-			Please,<br>
-			Select the number of Flag<br>
-			to perofrm your Donation
+			Выберите столько Лунгта сколько вы хотите купить:
 			<br>
-		<select type="text" ng-model="qta">
+		<select type="text" ng-model="qta" name="qtaFlag">
 			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
 			
 		</select>
-		<span class="total">{{qta*5}} euro</span>
+		<span class="total">{{qta*5}} евро</span>
 			
 			<form>
 			<div id="datiDonatore">
 				<div class="riga">
-					<div class="txt">Name</div>
+					<div class="txt">Имя</div>
 					<div class="field"><input class="dati" type="text" name="nome" required></div>
 					<div style="clear:both;"></div>
 				</div>
 
 				<div class="riga">
-					<div class="txt">Surname</div>
+					<div class="txt">Фамилия</div>
 					<div class="field"><input class="dati" type="text" name="cognome" required></div>
 					<div style="clear:both;"></div>
 				</div>
 
 				<div class="riga">
-					<div class="txt">E-mail</div>
+					<div class="txt">Е-майл</div>
 					<div class="field"><input class="dati" type="email" name="email" required></div>
 					<div style="clear:both;"></div>
 				</div>
-				* Fill in all the fileds
+				* Пожалуйста, заполните все обязательные поля!
 			</div>
 
 			<div>
 				<button type="submit"  class="btn btn-large btn-primary" type="button" ng-click="doBuy">
-				<i class="icon-shopping-cart icon-white"></i> Click to Donate!
+				<i class="icon-shopping-cart icon-white"></i> Заказать сейчас
 				</button>
 			</div>
 			</form>
@@ -67,7 +60,7 @@
 
   </div>
   <div class="span4" id="sidebar">
-  	<div ng-include src="'views/side/en.html'"></div>
+  	<div ng-include src="'views/side/ru.html'"></div>
   	
 
   </div>

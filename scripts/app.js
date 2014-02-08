@@ -50,6 +50,28 @@ angular.module('angularApp', [
         lang_sel:'it'
       })
 
+      .when('/ru/', {
+        templateUrl: 'views/ru-main.html',
+        controller: 'MainCtrl',
+        lang_sel:'ru'
+      })
+      .when('/ru/PreservationTibetanCulture/', {
+        templateUrl: 'views/ru-PreservationTibetanCulture.html',
+        controller: 'MainCtrl',
+        lang_sel:'ru'
+      })
+      .when('/ru/LungtaTradition/', {
+        templateUrl: 'views/ru-LungtaTradition.html',
+        controller: 'MainCtrl',
+        lang_sel:'ru'
+      })
+      .when('/ru/Contacts/', {
+        templateUrl: 'views/ru-Contacts.html',
+        controller: 'MainCtrl',
+        lang_sel:'ru'
+      })
+
+
       .otherwise({
         redirectTo: '/'
       });

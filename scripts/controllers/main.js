@@ -45,16 +45,35 @@ angular.module('angularApp')
 			url:'it',
 		},
       	{
-			title:'Preservare la Cultura TIbetana',
+			title:'Preservare la Cultura Tibetana',
 			url:'it/PreservationTibetanCulture',
 		},
       	{
-			title:'La Tradizione delle Lungta ',
+			title:'La Tradizione delle Lungta',
 			url:'it/LungtaTradition',
 		},
 		{
 			title:'Contatti',
 			url:'it/Contacts',
+		},
+    ];
+
+    $scope.pages_ru = [
+		{
+			title:'Главное',
+			url:'ru',
+		},
+      	{
+			title:'Продолжение Тибетской Культуры',
+			url:'ru/PreservationTibetanCulture',
+		},
+      	{
+			title:'Традиция Лунгта',
+			url:'ru/LungtaTradition',
+		},
+		{
+			title:'Контакты',
+			url:'ru/Contacts',
 		},
     ];
 
