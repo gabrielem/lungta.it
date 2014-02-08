@@ -10,7 +10,7 @@ angular.module('angularApp')
     ];
 
 	$scope.qta=1;
-
+	$scope.pageTitle="Lungta.it";
 
 	
 	$scope.range = function(n) {

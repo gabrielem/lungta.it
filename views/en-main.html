@@ -10,9 +10,11 @@
 	blessings for the New Year.<br>
 	<br><br>
 	Cost: 5 euros for Lungta's Set
+	<br>
+	(One set is made by 5 flags).
 	<br><br>
 	<button  ng-show="!showBuyThis" class="btn btn-large btn-primary" type="button" ng-click="showBuyThis = ! showBuyThis">
-		<i class="icon-shopping-cart icon-white"></i> Buy Now
+		<i class="icon-shopping-cart icon-white"></i> Make Donation!
 	</button>
 	
 	<div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
@@ -27,13 +29,36 @@
 			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
 			
 		</select>
-		<span class="total">{{qta*5}} euros</span>
+		<span class="total">{{qta*5}} euro</span>
+			
+			<form>
+			<div id="datiDonatore">
+				<div class="riga">
+					<div class="txt">Name</div>
+					<div class="field"><input class="dati" type="text" name="nome" required></div>
+					<div style="clear:both;"></div>
+				</div>
+
+				<div class="riga">
+					<div class="txt">Surname</div>
+					<div class="field"><input class="dati" type="text" name="cognome" required></div>
+					<div style="clear:both;"></div>
+				</div>
+
+				<div class="riga">
+					<div class="txt">E-mail</div>
+					<div class="field"><input class="dati" type="email" name="email" required></div>
+					<div style="clear:both;"></div>
+				</div>
+
+			</div>
 
 			<div>
-				<button  class="btn btn-large btn-primary" type="button" ng-click="doBuy">
-				<i class="icon-shopping-cart icon-white"></i> Click to Buy!
+				<button type="submit"  class="btn btn-large btn-primary" type="button" ng-click="doBuy">
+				<i class="icon-shopping-cart icon-white"></i> Click to Donate!
 				</button>
 			</div>
+			</form>
 
 		</div>
 	</div>
