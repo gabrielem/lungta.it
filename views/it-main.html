@@ -31,23 +31,23 @@
 		</select>
 		<span class="total">{{qta*5}} euro</span>
 			
-			<form>
+			<form ng-submit="addDonation()">
 			<div id="datiDonatore">
 				<div class="riga">
 					<div class="txt">Nome</div>
-					<div class="field"><input class="dati" type="text" name="nome" required></div>
+					<div class="field"><input class="dati" type="text" required ng-model="dname"></div>
 					<div style="clear:both;"></div>
 				</div>
 
 				<div class="riga">
 					<div class="txt">Cognome</div>
-					<div class="field"><input class="dati" type="text" name="cognome" required></div>
+					<div class="field"><input class="dati" type="text" required ng-model="dsurname"></div>
 					<div style="clear:both;"></div>
 				</div>
 
 				<div class="riga">
 					<div class="txt">E-mail</div>
-					<div class="field"><input class="dati" type="email" name="email" required></div>
+					<div class="field"><input class="dati" type="email" required  ng-model="demail"></div>
 					<div style="clear:both;"></div>
 				</div>
 				* Compila tutti i campi

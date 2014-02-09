@@ -1,0 +1,41 @@
+<h1>Donations</h1>
+
+<table class="table table-hover">
+<tr>
+	<th>code Trans.</th>
+	<th>name</th>
+    <th>email</th>
+    <th>qta</th>
+    <th>euros</th>
+    <th>language</th>
+    <th>confirmed?</th>
+    <th></th>
+    
+</tr>
+
+<tr ng-cloak ng-repeat="(k,donation) in donations">
+	<td>{{donation.codeTr}}</td>
+    <td>{{donation.name}} {{donation.surname}}</td>
+    <td>{{donation.email}}</td>
+    <td align="center">{{donation.qta}}</td>
+    <td align="center">{{donation.qta*5}}</td>
+    <td align="center">{{donation.lang}}</td>
+    <td align="center">{{donation.confirmed}}</td>
+    <td>
+    	<button class="btn btn-danger" ng-click="removeDonation(k)">
+    		delete
+    	</button>
+
+    	<button ng-class="{'hidden':donation.confirmed=='yes'}" class="btn btn-success" ng-click="confirmDonation(k)">
+    		confirm!
+    	</button>
+
+    	<button ng-class="{'hidden':donation.confirmed=='no'}" class="btn btn-inverse" ng-click="unconfirmDonation(k)">
+    		unconfirm!
+    	</button>
+    </td>
+
+
+</tr>
+
+</table>      

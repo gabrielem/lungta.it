@@ -4,76 +4,84 @@ angular.module('angularApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'mgcrea.ngStrap'
+  'mgcrea.ngStrap',
+  'firebase'
 ])
   .config(['$routeProvider',function ($routeProvider) {
     $routeProvider
-      .when('/', {
+      .when('/en', {
         templateUrl: 'views/en-main.html',
         controller: 'MainCtrl',
-        lang_sel:'en'
       })
-      .when('/en/PreservationTibetanCulture/', {
+      .when('/en/PreservationTibetanCulture', {
         templateUrl: 'views/en-PreservationTibetanCulture.html',
         controller: 'MainCtrl',
-        lang_sel:'en'
       })
-      .when('/en/LungtaTradition/', {
+      .when('/en/LungtaTradition', {
         templateUrl: 'views/en-LungtaTradition.html',
         controller: 'MainCtrl',
-        lang_sel:'en'
       })
-      .when('/en/Contacts/', {
+      .when('/en/Contacts', {
         templateUrl: 'views/en-Contacts.html',
         controller: 'MainCtrl',
-        lang_sel:'en'
+      })
+      .when('/en/tks', {
+        templateUrl: 'views/en-Tks.html',
+        controller: 'MainCtrl',
       })
 
-      .when('/it/', {
+      .when('/it', {
         templateUrl: 'views/it-main.html',
         controller: 'MainCtrl',
-        lang_sel:'it'
       })
-      .when('/it/PreservationTibetanCulture/', {
+      .when('/it/PreservationTibetanCulture', {
         templateUrl: 'views/it-PreservationTibetanCulture.html',
         controller: 'MainCtrl',
-        lang_sel:'it'
       })
-      .when('/it/LungtaTradition/', {
+      .when('/it/LungtaTradition', {
         templateUrl: 'views/it-LungtaTradition.html',
         controller: 'MainCtrl',
-        lang_sel:'it'
       })
-      .when('/it/Contacts/', {
+      .when('/it/Contacts', {
         templateUrl: 'views/it-Contacts.html',
         controller: 'MainCtrl',
-        lang_sel:'it'
+      })
+      .when('/it/tks', {
+        templateUrl: 'views/it-Tks.html',
+        controller: 'MainCtrl',
       })
 
-      .when('/ru/', {
+
+      .when('/ru', {
         templateUrl: 'views/ru-main.html',
         controller: 'MainCtrl',
-        lang_sel:'ru'
       })
-      .when('/ru/PreservationTibetanCulture/', {
+      .when('/ru/PreservationTibetanCulture', {
         templateUrl: 'views/ru-PreservationTibetanCulture.html',
         controller: 'MainCtrl',
-        lang_sel:'ru'
       })
-      .when('/ru/LungtaTradition/', {
+      .when('/ru/LungtaTradition', {
         templateUrl: 'views/ru-LungtaTradition.html',
         controller: 'MainCtrl',
-        lang_sel:'ru'
       })
-      .when('/ru/Contacts/', {
+      .when('/ru/Contacts', {
         templateUrl: 'views/ru-Contacts.html',
         controller: 'MainCtrl',
-        lang_sel:'ru'
+      })
+      .when('/ru/tks', {
+        templateUrl: 'views/ru-Tks.html',
+        controller: 'MainCtrl',
       })
 
 
+      .when('/myA', {
+        templateUrl: 'views/a.html',
+        controller: 'MainCtrl',
+      })
+      
+
       .otherwise({
-        redirectTo: '/'
+        redirectTo: '/en'
       });
   }]);
 

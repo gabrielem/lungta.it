@@ -3,5 +3,5 @@
 </div>
 
 <ul class="nav nav-pills">
-  <li ng-repeat="page in pages_en" class="colorNav"><a href="#/{{page.url}}">{{page.title}}</a></li>
+  <li ng-repeat="page in pages_en" class="colorNav"><a ng-class="{sel:isActive(page.url)}" href="#/{{page.url}}">{{page.title}}</a></li>
 </ul>
