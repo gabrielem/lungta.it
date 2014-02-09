@@ -1,13 +1,16 @@
 'use strict';
 
 angular.module('angularApp')
-  .controller('MainCtrl', ['$scope','$cookies','$location','$firebase',function ($scope, $cookies, $location, $firebase) {
+  .controller('MainCtrl', ['$scope','ServiceMsg','$cookieStore','$cookies','$location','$firebase',function ($scope, ServiceMsg, $cookieStore, $cookies, $location, $firebase) {
     
   	var firebaseCollectionName="lungtaDonation";
+	$scope.locLang=$location.$$url.substring(1,3);
+
+	$scope.datiInviati=$cookieStore.get('Dati');
+    $scope.dpaymenttype="Paypal";
 
 
-    $scope.locLang=$location.$$url.substring(1,3);
-
+    $scope.deleteDisabled=function(){alert('Delete function is disabled for this item.');}
     $scope.isActive = function(route) {
     	return route == $location.$$url.substring(1);
     };
@@ -34,10 +37,17 @@ angular.module('angularApp')
 	          email: $scope.demail,
 	          qta: $scope.qta,
 	          lang: $scope.locLang,
+	          payment_type: $scope.dpaymenttype,
 	          confirmed: 'no'
 	        };
 	    console.log(Dati);
 		$scope.donations.$add(Dati);
+		//$cookieStore.put("salvaDati",Dati);
+		$scope.datiInviati=Dati;
+		
+		ServiceMsg.setMsg(Dati);
+		$cookieStore.put('Dati', Dati);
+
 		$scope.DataAreSaved();
 	};
 
@@ -80,6 +90,7 @@ angular.module('angularApp')
         	return foo;
     };
 
+    $scope.payment_types_en=[{name:'Pay with Paypal',value:'Paypal'},{name:'Pay with Bank Transfer',value:'Bank'}];
 	$scope.pages_en = [
 		{
 			title:'Home',
@@ -94,11 +105,16 @@ angular.module('angularApp')
 			url:'en/LungtaTradition',
 		},
 		{
+			title:'Pharping',
+			url:'en/Pharping',
+		},
+		{
 			title:'Contacts',
 			url:'en/Contacts',
 		},
     ];
-
+    
+    $scope.payment_types_it=[{name:'Paga con Paypal',value:'Paypal'},{name:'Paga con Bonifico',value:'Bank'}];
     $scope.pages_it = [
 		{
 			title:'Home',
@@ -113,12 +129,18 @@ angular.module('angularApp')
 			url:'it/LungtaTradition',
 		},
 		{
+			title:'Pharping',
+			url:'it/Pharping',
+		},
+		{
 			title:'Contatti',
 			url:'it/Contacts',
 		},
     ];
 
-    $scope.pages_ru = [
+    
+    $scope.payment_types_ru=[{name:'Paypal',value:'Paypal'},{name:'банковский перевод',value:'Bank'}];
+	$scope.pages_ru = [
 		{
 			title:'Главное',
 			url:'ru',
@@ -132,10 +154,23 @@ angular.module('angularApp')
 			url:'ru/LungtaTradition',
 		},
 		{
+			title:'Парпинг',
+			url:'ru/Pharping',
+		},
+		{
 			title:'Контакты',
 			url:'ru/Contacts',
 		},
     ];
 
-  }]);
+  }])
+.factory('ServiceMsg', [function () {
+	var message='';
+	var getMsg=function(){return message};
+	var setMsg=function(m){message=angular.fromJson(m)};
+	return {
+		getMsg:getMsg,
+		setMsg:setMsg
+	};
+}]);
 

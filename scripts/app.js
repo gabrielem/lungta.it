@@ -21,6 +21,10 @@ angular.module('angularApp', [
         templateUrl: 'views/en-LungtaTradition.html',
         controller: 'MainCtrl',
       })
+      .when('/en/Pharping', {
+        templateUrl: 'views/en-Pharping.html',
+        controller: 'MainCtrl',
+      })
       .when('/en/Contacts', {
         templateUrl: 'views/en-Contacts.html',
         controller: 'MainCtrl',
@@ -40,6 +44,10 @@ angular.module('angularApp', [
       })
       .when('/it/LungtaTradition', {
         templateUrl: 'views/it-LungtaTradition.html',
+        controller: 'MainCtrl',
+      })
+      .when('/it/Pharping', {
+        templateUrl: 'views/it-Pharping.html',
         controller: 'MainCtrl',
       })
       .when('/it/Contacts', {
@@ -62,6 +70,10 @@ angular.module('angularApp', [
       })
       .when('/ru/LungtaTradition', {
         templateUrl: 'views/ru-LungtaTradition.html',
+        controller: 'MainCtrl',
+      })
+      .when('/ru/Pharping', {
+        templateUrl: 'views/ru-Pharping.html',
         controller: 'MainCtrl',
       })
       .when('/ru/Contacts', {

@@ -8,6 +8,7 @@
     <th>qta</th>
     <th>euros</th>
     <th>language</th>
+    <th>Payment</th>
     <th>confirmed?</th>
     <th></th>
     
@@ -20,10 +21,14 @@
     <td align="center">{{donation.qta}}</td>
     <td align="center">{{donation.qta*5}}</td>
     <td align="center">{{donation.lang}}</td>
+    <td align="center">{{donation.payment_type}}</td>
     <td align="center">{{donation.confirmed}}</td>
     <td>
-    	<button class="btn btn-danger" ng-click="removeDonation(k)">
+    	<button ng-class="{'hidden':donation.confirmed=='yes'}" class="btn btn-danger" ng-click="removeDonation(k)">
     		delete
+    	</button>
+		<button ng-class="{'hidden':donation.confirmed=='no'}" class="btn" ng-click="deleteDisabled()">
+    		<del>delete</del>
     	</button>
 
     	<button ng-class="{'hidden':donation.confirmed=='yes'}" class="btn btn-success" ng-click="confirmDonation(k)">

@@ -50,6 +50,13 @@
 					<div class="field"><input class="dati" type="email" required ng-model="demail"></div>
 					<div style="clear:both;"></div>
 				</div>
+				
+				<div class="riga">
+					<select type="text" ng-model="dpaymenttype">
+						<option ng-repeat="payment in payment_types_en" ng-selected="$index==0" value="{{payment.value}}">{{payment.name}}</option>
+						
+					</select>
+				</div>
 				* Fill in all the fileds
 			</div>
 
