@@ -101,6 +101,10 @@ angular.module('angularApp')
 			url:'en/PreservationTibetanCulture',
 		},
       	{
+			title:'Shang Shung Institute',
+			url:'en/SSI',
+		},
+      	{
 			title:'Lungta Tradition',
 			url:'en/LungtaTradition',
 		},

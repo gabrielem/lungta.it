@@ -21,6 +21,10 @@ angular.module('angularApp', [
         templateUrl: 'views/en-LungtaTradition.html',
         controller: 'MainCtrl',
       })
+      .when('/en/SSI', {
+        templateUrl: 'views/en-SSI.html',
+        controller: 'MainCtrl',
+      })
       .when('/en/Pharping', {
         templateUrl: 'views/en-Pharping.html',
         controller: 'MainCtrl',
