@@ -27,11 +27,11 @@
 		<br>
 		<div class="product">
 			Please,<br>
-			Select the number of Flag<br>
-			to perofrm your Donation
+			Select the number of Lungta's<br>
+			you wish to purchase (1 pack = 5 flags)
 			<br>
 		<select type="text" ng-model="qta">
-			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
+			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}} pack</option>
 			
 		</select>
 		<span class="total">{{qta*5}} euro</span>
