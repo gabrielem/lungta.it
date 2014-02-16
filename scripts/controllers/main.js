@@ -97,7 +97,7 @@ angular.module('angularApp')
 			url:'en',
 		},
       	{
-			title:'Preservation of Tibetan Culture',
+			title:'Preserving Tibetan Culture',
 			url:'en/PreservationTibetanCulture',
 		},
       	{
