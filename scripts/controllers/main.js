@@ -90,6 +90,16 @@ angular.module('angularApp')
         	return foo;
     };
 
+
+    $scope.footerTxt_lang=[
+    	{en:'For more information please write to: <b> <a href="mailto:lungtas@shangshunguk.org">lungtas@shangshunguk.org</a> </b> '},
+    	{it:'Per maggiori informazioni scrivere a: <b> <a href="mailto:lungtas@shangshunguk.org">lungtas@shangshunguk.org</a> </b> '},
+    	{ru:'Если Вы хотите оплатить иначе, или оплатить коллективно, пожалуйста, свяжитесь с нами: <b> <a href="mailto:lungtas@shangshunguk.org">lungtas@shangshunguk.org</a> </b> '},
+
+    	];
+    	
+    //$scope.footerTxt=$scope.footerTxt_lang.[$scope.locLang];
+
     $scope.payment_types_en=[{name:'Pay with Paypal',value:'Paypal'},{name:'Pay with Bank Transfer',value:'Bank'}];
 	$scope.pages_en = [
 		{
