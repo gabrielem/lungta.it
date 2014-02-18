@@ -139,6 +139,10 @@ angular.module('angularApp')
 			url:'it/PreservationTibetanCulture',
 		},
       	{
+			title:'Istituto Shang Shung',
+			url:'en/SSI',
+		},
+      	{
 			title:'La Tradizione delle Lungta',
 			url:'it/LungtaTradition',
 		},
