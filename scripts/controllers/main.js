@@ -168,7 +168,7 @@ angular.module('angularApp')
 			url:'ru/LungtaTradition',
 		},
 		{
-			title:'Парпинг',
+			title:'Пхарпинг',
 			url:'ru/Pharping',
 		},
 		{
