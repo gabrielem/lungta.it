@@ -140,7 +140,7 @@ angular.module('angularApp')
 		},
       	{
 			title:'Istituto Shang Shung',
-			url:'en/SSI',
+			url:'it/SSI',
 		},
       	{
 			title:'La Tradizione delle Lungta',

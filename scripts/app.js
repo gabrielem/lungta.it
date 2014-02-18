@@ -46,6 +46,10 @@ angular.module('angularApp', [
         templateUrl: 'views/it-PreservationTibetanCulture.html',
         controller: 'MainCtrl',
       })
+      .when('/it/SSI', {
+        templateUrl: 'views/it-SSI.html',
+        controller: 'MainCtrl',
+      })
       .when('/it/LungtaTradition', {
         templateUrl: 'views/it-LungtaTradition.html',
         controller: 'MainCtrl',
