@@ -167,6 +167,10 @@ angular.module('angularApp')
 			title:'Продолжение Тибетской Культуры',
 			url:'ru/PreservationTibetanCulture',
 		},
+		{
+			title:'Институт Шанг-Шунг',
+			url:'ru/SSI',
+		},
       	{
 			title:'Традиция Лунгта',
 			url:'ru/LungtaTradition',
