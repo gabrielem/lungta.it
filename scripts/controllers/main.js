@@ -96,7 +96,8 @@ angular.module('angularApp')
     	{en:'For more information please write to: <b> <a href="mailto:lungtas@shangshunguk.org">lungtas@shangshunguk.org</a> </b> '},
     	{it:'Per maggiori informazioni scrivere a: <b> <a href="mailto:lungtas@shangshunguk.org">lungtas@shangshunguk.org</a> </b> '},
     	{ru:'Если Вы хотите оплатить иначе, или оплатить коллективно, пожалуйста, свяжитесь с нами: <b> <a href="mailto:lungtas@shangshunguk.org">lungtas@shangshunguk.org</a> </b> '},
-
+    	{zh:'For more information please write to: <b> <a href="mailto:lungtas@shangshunguk.org">lungtas@shangshunguk.org</a> </b> '},
+    	
     	];
     	
     //$scope.footerTxt=$scope.footerTxt_lang.[$scope.locLang];
@@ -195,23 +196,23 @@ angular.module('angularApp')
 			url:'zh',
 		},
       	{
-			title:'Preserving Tibetan Culture',
+			title:'保护西藏的文化',
 			url:'zh/PreservationTibetanCulture',
 		},
       	{
-			title:'Shang Shung Institute',
+			title:'象雄学院',
 			url:'zh/SSI',
 		},
       	{
-			title:'Lungta Tradition',
+			title:'风马旗传统',
 			url:'zh/LungtaTradition',
 		},
 		{
-			title:'Pharping',
+			title:'帕平',
 			url:'zh/Pharping',
 		},
 		{
-			title:'Contacts',
+			title:'联系方式',
 			url:'zh/Contacts',
 		},
     ];
