@@ -1,0 +1,54 @@
+
+<div ng-include src="'views/nav/zh.html'"></div>
+
+
+<div class="row">
+  <div class="span8" id="mainContent">
+  <h2>For compliting your donation</h2>
+  <b>Please, follow the above information</b>:
+  <br>
+  <br>
+  <p>
+  Please to confirm your order send a payment of
+   
+  <span class="euroForPya">
+  {{datiInviati.qta*5}} Euros.
+  </span>
+
+  <div ng-class="{'hidden':datiInviati.payment_type=='Bank'}">  
+  By click the "Donate" Paypal button above:
+  
+  
+  <br><br>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <input type="hidden" name="cmd" value="_donations">
+  <input type="hidden" name="business" value="shop@shangshunguk.org">
+  <input type="hidden" name="lc" value="US">
+  <input type="hidden" name="item_name" value="Shang Shung UK">
+  <input type="hidden" name="item_number" value="XXX-ID-DONATION">
+  <input type="hidden" name="no_note" value="0">
+  <input type="hidden" name="currency_code" value="EUR">
+  <input type="hidden" name="amount" value="{{datiInviati.qta*5}}">
+
+  <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
+  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+  </form>
+  </div>
+
+  <div ng-class="{'hidden':datiInviati.payment_type=='Paypal'}">  
+    By send a Bank transfer to:
+     <div ng-include src="'views/bankinfo.html'"></div>
+    <br>
+  </div>
+  </p>
+
+  <h2>Thank You!</h2>
+  </div>
+  <div class="span4" id="sidebar">
+  	<div ng-include src="'views/side/zh.html'"></div>
+  	
+
+  </div>
+  
+</div>

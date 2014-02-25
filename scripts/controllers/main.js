@@ -77,6 +77,7 @@ angular.module('angularApp')
       {title:'English',suff:'en'},
       {title:'Italiano',suff:'it'},
       {title:'Russo',suff:'ru'},
+      {title:'Cinese',suff:'zh'},
     ];
 
 	$scope.qta=1;
@@ -182,6 +183,36 @@ angular.module('angularApp')
 		{
 			title:'Контакты',
 			url:'ru/Contacts',
+		},
+    ];
+
+
+
+    $scope.payment_types_zh=[{name:'Pay with Paypal',value:'Paypal'},{name:'Pay with Bank Transfer',value:'Bank'}];
+	$scope.pages_zh = [
+		{
+			title:'Home',
+			url:'zh',
+		},
+      	{
+			title:'Preserving Tibetan Culture',
+			url:'zh/PreservationTibetanCulture',
+		},
+      	{
+			title:'Shang Shung Institute',
+			url:'zh/SSI',
+		},
+      	{
+			title:'Lungta Tradition',
+			url:'zh/LungtaTradition',
+		},
+		{
+			title:'Pharping',
+			url:'zh/Pharping',
+		},
+		{
+			title:'Contacts',
+			url:'zh/Contacts',
 		},
     ];
 

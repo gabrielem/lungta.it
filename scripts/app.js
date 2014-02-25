@@ -98,6 +98,36 @@ angular.module('angularApp', [
       })
 
 
+      .when('/zh', {
+        templateUrl: 'views/zh-main.html',
+        controller: 'MainCtrl',
+      })
+      .when('/zh/PreservationTibetanCulture', {
+        templateUrl: 'views/zh-PreservationTibetanCulture.html',
+        controller: 'MainCtrl',
+      })
+      .when('/zh/SSI', {
+        templateUrl: 'views/zh-SSI.html',
+        controller: 'MainCtrl',
+      })
+      .when('/zh/LungtaTradition', {
+        templateUrl: 'views/zh-LungtaTradition.html',
+        controller: 'MainCtrl',
+      })
+      .when('/zh/Pharping', {
+        templateUrl: 'views/zh-Pharping.html',
+        controller: 'MainCtrl',
+      })
+      .when('/zh/Contacts', {
+        templateUrl: 'views/zh-Contacts.html',
+        controller: 'MainCtrl',
+      })
+      .when('/zh/tks', {
+        templateUrl: 'views/zh-Tks.html',
+        controller: 'MainCtrl',
+      })
+
+
       .when('/myA', {
         templateUrl: 'views/a.html',
         controller: 'MainCtrl',

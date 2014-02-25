@@ -1,0 +1,7 @@
+<div id="selectLang">
+	<a href="#/{{lang.suff}}/" ng-class="{'sel': lang.suff=='zh'}" ng-repeat="lang in languages" class="{{lang.suff}}" title="{{lang.title}}"></a>
+</div>
+
+<ul class="nav nav-pills">
+  <li ng-repeat="page in pages_zh" class="colorNav"><a ng-class="{sel:isActive(page.url)}" href="#/{{page.url}}">{{page.title}}</a></li>
+</ul>
