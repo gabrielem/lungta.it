@@ -192,7 +192,7 @@ angular.module('angularApp')
     $scope.payment_types_zh=[{name:'Pay with Paypal',value:'Paypal'},{name:'Pay with Bank Transfer',value:'Bank'}];
 	$scope.pages_zh = [
 		{
-			title:'Home',
+			title:'首页',
 			url:'zh',
 		},
       	{
