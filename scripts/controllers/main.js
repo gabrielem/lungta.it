@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('angularApp')
-  .controller('MainCtrl', ['$scope','ServiceMsg','$cookieStore','$cookies','$location','$firebase',function ($scope, ServiceMsg, $cookieStore, $cookies, $location, $firebase) {
+  .controller('MainCtrl', ['$scope','$http','ServiceMsg','$cookieStore','$cookies','$location','$firebase',function ($scope, $http, ServiceMsg, $cookieStore, $cookies, $location, $firebase) {
     
   	var firebaseCollectionName="lungtaDonation";
 	$scope.locLang=$location.$$url.substring(1,3);
@@ -40,7 +40,7 @@ angular.module('angularApp')
 	          payment_type: $scope.dpaymenttype,
 	          confirmed: 'no'
 	        };
-	    console.log(Dati);
+                //console.log(Dati);
 		$scope.donations.$add(Dati);
 		//$cookieStore.put("salvaDati",Dati);
 		$scope.datiInviati=Dati;
@@ -48,7 +48,7 @@ angular.module('angularApp')
 		ServiceMsg.setMsg(Dati);
 		$cookieStore.put('Dati', Dati);
 
-		$scope.DataAreSaved();
+		$scope.DataAreSaved(Dati);
 	};
 
 
@@ -66,10 +66,25 @@ angular.module('angularApp')
         refDel.remove();
     };
 	
-	$scope.DataAreSaved=function(){
-		$scope.showBuyThis=false;
+	$scope.DataAreSaved=function(Dati){
+		$scope.showBuyThis = false;
 		var urlToGo="/"+$scope.locLang+"/tks";
 		console.log(urlToGo);
+                
+                $http.post('http://lungta.it/sendmail.php', Dati).
+                success(function(data, status, headers, config) {
+                    console.log("- - data");
+                    console.log(data);
+                    console.log("data - - - -");
+                  // this callback will be called asynchronously
+                  // when the response is available
+                }).
+                error(function(data, status, headers, config) {
+                  // called asynchronously if an error occurs
+                  // or server returns response with an error status.
+                });
+                
+                
 		$location.path(urlToGo);
 	};
 
