@@ -19,10 +19,37 @@
         <link rel="stylesheet" href="styles/bootstrap.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
+
+        <script>
+            window.cookieconsent_options = {
+                /*message: 'Questo sito fa uso di cookie normali e con il tuo consenso anche cookie di profilazione, sia del sito stesso che di terze parti, anche al fine di proporti pubblicità in linea con le tue preferenze. Per sapere di più ',
+                learnMore: 'clicca qui',
+                dismiss:"accetto",*/
+                link:"{{ path('eml_cms_element',{'slug':'cookie'}) }}",
+                theme:'light-bottom'
+            };
+        </script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
+        <style>
+            .cc_container .cc_btn, .cc_container .cc_btn:visited{
+                background-color: #000000 !important;
+                color:#ffffff !important;
+            }
+            .cc_container .cc_btn:hover{
+                background-color: #909090 !important;
+                color:#ffffff !important;
+            }
+            .cc_container a, .cc_container a:visited{
+                color:red !important;
+            }
+            .cc_container a:hover{
+                color:#000000 !important;
+            }
+        </style>
 </head>
   <body>
 
-    
+
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -37,16 +64,16 @@
     <div class="hero-unit" ng-controller="MainCtrl">
     <h1>Losar 2014</h1>
     <h2>Let’s Preserve Tibetan Culture.</h2>
-    <!--  
+    <!--
     <ul>
         <li ng-repeat="thing in awesomeThings">{{thing}}</li>
-    </ul> 
+    </ul>
     -->
       <!-- Add your site or application content here -->
     </div>
 
-    <div class="container" ng-view=""></div>  
-    
+    <div class="container" ng-view=""></div>
+
 
 
     <footer-directive data-text="footerTxt_lang" data-l="{{locLang}}"></footer-directive>
@@ -98,7 +125,7 @@
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/directives/scrollto.js" type="text/javascript"></script>
         <script src="scripts/directives/footer.js" type="text/javascript"></script>
-        
+
         <!-- endbuild -->
 </body>
 </html>
