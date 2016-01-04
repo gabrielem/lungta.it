@@ -4,19 +4,21 @@
 
 <div class="row">
   <div class="span8" id="mainContent">
-  <h2>For compliting your donation</h2>
+  <h2>To complete your donation:</h2>
+  <!-- 
   <b>Please, follow the above information</b>:
   <br>
+  -->
   <br>
   <p>
-  Please to confirm your order send a payment of
+  Please send a payment of:
    
   <span class="euroForPya">
   {{datiInviati.qta*5}} Euros.
   </span>
 
   <div ng-class="{'hidden':datiInviati.payment_type=='Bank'}">  
-  By click the "Donate" Paypal button above:
+  Click the "Donate" Paypal button below:
   
   
   <br><br>
@@ -37,7 +39,7 @@
   </div>
 
   <div ng-class="{'hidden':datiInviati.payment_type=='Paypal'}">  
-    By send a Bank transfer to:
+    Make a Bank transfer to:
      <div ng-include src="'views/bankinfo.html'"></div>
     <br>
   </div>

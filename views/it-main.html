@@ -5,14 +5,14 @@
 <div class="row">
   <div class="span8" id="mainContent">
 	<h2>Issa le tue bandierine Lungta per il nuovo anno Tibetano.</h2>
-	
+
 	<b>Aiutaci a mantenere in vita la lingua, cultura e tradizioni del Tibet issando lungta nel luogo sacro di Pharping.</b>
 	<br><br>
 
 	Le bandierine di preghiera saranno messe a Pharping,<br>
 	per portarti fortuna ed armonizzare<br>
 	i tuoi elementi con quelli dell’anno nuovo.
-	
+
 	<br><br>
 	Costo: 5 euro per ogni set di Lungta
 	<br>
@@ -21,7 +21,7 @@
 	<button  ng-show="!showBuyThis" class="btn btn-large btn-primary" type="button" ng-click="showBuyThis = ! showBuyThis">
 		<i class="icon-shopping-cart icon-white"></i> Dona ora!
 	</button>
-	
+
 	<div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
 		<i class="close" ng-click="showBuyThis = ! showBuyThis">chiudi</i>
 		<br>
@@ -32,10 +32,10 @@
 			<br>
 		<select type="text" ng-model="qta" name="qtaFlag">
 			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
-			
+
 		</select>
 		<span class="total">{{qta*5}} euro</span>
-			
+
 			<form ng-submit="addDonation()">
 			<div id="datiDonatore">
 				<div class="riga">
@@ -59,7 +59,7 @@
 				<div class="riga">
 					<select type="text" ng-model="dpaymenttype">
 						<option ng-repeat="payment in payment_types_it" ng-selected="$index==0" value="{{payment.value}}">{{payment.name}}</option>
-						
+
 					</select>
 				</div>
 				* Compila tutti i campi
@@ -75,12 +75,13 @@
 		</div>
 	</div>
 
-
+<!--
 <br><br>
 Acquistando le lungta stai sostenendo il Progetto Arte Rara dell’Istituto Shang Shung del Regno Unito.
-
+-->
 	<br><br>
 
+<!--
 <h2>Progetto Arte Rara</h2>
 	<p>
 	<b>L’istituto Shang Shung del Regno Unito sta documentando pezzi di arte storica, Tibetana e Newari di primissima qualita’. Le riprese saranno eseguite dal rinomato fotografo e regista</b>
@@ -96,6 +97,15 @@ Acquistando le lungta stai sostenendo il Progetto Arte Rara dell’Isti
 	esperienza e conoscenza in materia e risponde a molte richieste di
 	consulenza da parte di artisti sia tibetani che nepalesi.
 	</p>
+-->
+<!--
+<h2>Shang Shung Institute UK Tibetan Language Project</h2>
+La lingua e' la vera base di una cultura. Oggi non solo la cultura tibetana e' minacciata, ma lo e' il linguaggio stesso, a causa di politiche educative statali, e i giovani tibetani vengono forzati a optare per lo studio di linguaggi commercialmente validi. La vasta tradizione letteraria, costituente il vero centro della cultura tibetana,  e' trascurata, ma e' essenziale per preservare l'identita' del popolo tibetano, a beneficio delle future generazioni. Le migliaia di testi di Buddhismo Tibetano, molti dei quali devono essere ancora tradotti, rappresentano inoltre un importante tesoro spirituale per il resto del mondo.
+<br><br>
+Puoi aiutare a preservare il linguaggio Tibetano attraverso l'istituto Shang Shung del Regno Unito, che sta creando un archivio letterario online, insieme ad un programma di corsi li lingua Tibetana diretto dal Dr. Fabian Sanders, professore di Lingua e Cultura Tibetana all'universita' Ca' Foscari di Venenzia, e direttore accademico della Shang Shung del regno unito. Questa iniziativa aiutera' inoltre a promuovere il programma di traduzione Shang Shung, dove i testi vengono tradotti da gruppi di studenti, cosi' dando una possibilita' agli occidentali di accedere al tesoro dell'antica conoscenza tibetana. Vi sara' anche possibile accedere alla piattaforma online ed imparare un po' di tibetano!
+<br><br>
+Comprate le vostre lungta adesso e aiutate il Dharma a  prosperare!
+-->
 
 <br><br><br>
 <img src="images/home.jpg" style="">
@@ -107,8 +117,8 @@ Acquistando le lungta stai sostenendo il Progetto Arte Rara dell’Isti
   </div>
   <div class="span4" id="sidebar">
   	<div ng-include src="'views/side/it.html'"></div>
-  	
+
 
   </div>
-  
+
 </div>

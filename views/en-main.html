@@ -7,12 +7,12 @@
   	<h2>Hang your Lungta Flags for Tibetan New Year</h2>
   	<b>Help us to maintain the language, culture and traditions of Tibet by hanging Lungta's in the sacred place of Pharping.</b>
   	<br>
-	Your flags will be hung by us in Pharping, 
+	Your flags will be hung by us in Pharping,
 	<br>
-	bringing you good fortune and coordinating 
+	bringing you good fortune and coordinating
 	<br>
 	your elements with those of the New Year.
-	
+
 	<br><br>
 	Cost: 5 euros per set of Lungta flags
 	<br>
@@ -24,7 +24,7 @@
 	</button>
 	<br><br>
 
-	
+
 
 	<div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
 		<i class="close" ng-click="showBuyThis = ! showBuyThis">close</i>
@@ -36,10 +36,10 @@
 			<br>
 		<select type="text" ng-model="qta">
 			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}} pack</option>
-			
+
 		</select>
 		<span class="total">{{qta*5}} euro</span>
-			
+
 			<form ng-submit="addDonation()">
 			<div id="datiDonatore">
 				<div class="riga">
@@ -59,11 +59,11 @@
 					<div class="field"><input class="dati" type="email" required ng-model="demail"></div>
 					<div style="clear:both;"></div>
 				</div>
-				
+
 				<div class="riga">
 					<select type="text" ng-model="dpaymenttype">
 						<option ng-repeat="payment in payment_types_en" ng-selected="$index==0" value="{{payment.value}}">{{payment.name}}</option>
-						
+
 					</select>
 				</div>
 				* Fill in all the fileds
@@ -80,20 +80,43 @@
 	</div>
 
 
-
+<!-- 2014
 By buying Lungtas you are supporting the Shang Shung Institute UK Rare Art Project.
-
+-->
+By buying Lungtas you are supporting the Shang Shung Institute UK Tibetan Language Project.
 	<br><br>
 
+<!-- 2014
 <h2>Shang Shung UK Rare Art Project</h2>
 	<p>The Shang Shung Institute UK is documenting a Rare Art Project of the highest quality Tibetan and Nepalese Newari art. Filming will be done by Clive Arrowsmith, a world class photographer and documentary film maker, working very closely with Robert Beer, one of the leading experts on Tibetan and Newari art. Robert also has the most extensive collection of superb Newari art, collected over many years from the most accomplished painters in Nepal. There will also be filming of the artists at work in Nepal through the progress of their work. Robert Beer is not only known for his thangka painting but also wrote The Encylopaedia of Tibetan symbols and Motifs, one of the most authoritative works on the subject, used both by Tibetan and Western artists. In Nepal he is very highly thought of for his expertise and knowledge and is much sought after by the Nepalese and Tibetan artists for his advice and guidance. </p>
+-->
+<!--
+<h2>Shang Shung Institute UK Tibetan Language Project</h2>
 
+Language is the very basis of a culture.
+Today Tibetan culture is under threat, including the language itself, due to state educational policies
+and young Tibetan's being forced to opt for studying more commercially viable languages.
+The vast literary tradition, constituting the very heart of Tibetan culture is neglected,
+but is essential for preserving the Tibetan people's identity for the benefit of future generations.
+The thousands of Tibetan Buddhist texts, many of which are yet to be translated, also represent a
+valuable spiritual treasure for the rest of the world.
+<br><br>
+Please help the Shang Shung Institute UK preserve the Tibetan language by setting up a new & comprehensive,
+online literary resource together with an ongoing program of Tibetan language
+courses led by Dr. Fabian Sanders, Professor of Tibetan Language and Culture at the Universita`
+Ca` Foscari in Venice and Academic Director of Shang Shung UK. This initiative will also help
+promote the Shang Shung translation program, where texts are translated by groups of scholars,
+enabling Westerners to access the wealth of ancient Tibetan knowledge. You will also be able
+to access the online platform and learn some Tibetan!
+<br><br>
+Buy your lungtas now and help the Dharma flourish!
+-->
 
 	<br><br>
 
 
 
-<!-- 
+<!--
 	<br><br><br>
   	<h2>Help us to maintain the language, culture and customs of Tibet</h2>
 -->
@@ -106,7 +129,7 @@ By buying Lungtas you are supporting the Shang Shung Institute UK Rare Art Proje
 <img src="images/home.jpg" style="max-width: 300px;float:left;margin:5px 10px 0 0;">
 Historically, the hoisting of prayer flags to guarantee good fortune was an event that occurred within the nomadic communities of Tibet, however, this ritual effort has shifted in meaning by having assumed a more religious significance. The design of the flags also endured change as a more religious significance was acquired including the appearance of mantras and images. Auspicious symbols and images of four creatures of significant symbolic value (a garuda, a dragon, a snow lion and a tiger), along with the symbol of good fortune-- theWind horse-- are placed amongst the traditional texts of prayers, invocations and mantras. As the flags are hung, the writings and wishes that are inscribed upon the flag are said to be carried everywhere by the wind, blessings all sentient beings. You can buy as many lungtas as you want, but usually people buy the same number of flags as their years of age.
 -->
-<!-- 
+<!--
 <br><br>
 
 <b>By Purchasing Lungtas, you are Supporting the Shang Shung Institute UK  Rare Art Project</b>
@@ -118,15 +141,15 @@ preserving the highest quality and rare Tibetan and Nepalese Newari art. Find ou
 
 
   	<br><br>
-	
+
 
 
 
   </div>
   <div class="span4" id="sidebar">
   	<div ng-include src="'views/side/en.html'"></div>
-  	
+
 
   </div>
-  
+
 </div>

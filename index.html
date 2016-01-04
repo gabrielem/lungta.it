@@ -25,25 +25,26 @@
                 /*message: 'Questo sito fa uso di cookie normali e con il tuo consenso anche cookie di profilazione, sia del sito stesso che di terze parti, anche al fine di proporti pubblicità in linea con le tue preferenze. Per sapere di più ',
                 learnMore: 'clicca qui',
                 dismiss:"accetto",*/
-                link:"{{ path('eml_cms_element',{'slug':'cookie'}) }}",
+                target:"_blank",
+                link:"http://lungta.it/cookie.html",
                 theme:'light-bottom'
             };
         </script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/1.0.9/cookieconsent.min.js"></script>
         <style>
             .cc_container .cc_btn, .cc_container .cc_btn:visited{
-                background-color: #000000 !important;
+                background-color: #88bbff!important;
                 color:#ffffff !important;
             }
             .cc_container .cc_btn:hover{
-                background-color: #909090 !important;
+                background-color: #0088cc  !important;
                 color:#ffffff !important;
             }
             .cc_container a, .cc_container a:visited{
-                color:red !important;
+                color:#0088ff  !important;
             }
             .cc_container a:hover{
-                color:#000000 !important;
+                color:#0088cc  !important;
             }
         </style>
 </head>
@@ -62,7 +63,7 @@
     </div>
 
     <div class="hero-unit" ng-controller="MainCtrl">
-    <h1>Losar 2014</h1>
+    <h1>Losar 2016</h1>
     <h2>Let’s Preserve Tibetan Culture.</h2>
     <!--
     <ul>
@@ -72,7 +73,17 @@
       <!-- Add your site or application content here -->
     </div>
 
+  <!--
+  <center>
+      <div id="mainContent">
+        <h2>Lungta sales are closed for this year. </h2>
+        <h2>Thank you for your support and Happy Losar!</h2>
+    </div>
+  </center>
+  -->
+
     <div class="container" ng-view=""></div>
+
 
 
 
