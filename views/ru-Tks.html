@@ -10,16 +10,16 @@
   <br>
   <p>
   Пожалуйста, чтобы подтвердить заказ, сделайте оплату
-   
+
   <span class="euroForPya">
   {{datiInviati.qta*5}} Евро.
   </span>
 
-  <div ng-class="{'hidden':datiInviati.payment_type=='Bank'}">  
+  <div ng-class="{'hidden':datiInviati.payment_type=='Bank'}">
   Нажмите на кнопку Paypal "Donate" выше:
-  
-  
-  
+
+
+
   <br><br>
   <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
   <input type="hidden" name="cmd" value="_donations">
@@ -28,7 +28,7 @@
   <input type="hidden" name="item_name" value="Shang Shung UK">
   <input type="hidden" name="item_number" value="XXX-ID-DONATION">
   <input type="hidden" name="no_note" value="0">
-  <input type="hidden" name="currency_code" value="EUR">
+  <input type="hidden" name="currency_code" value="GBP">
   <input type="hidden" name="amount" value="{{datiInviati.qta*5}}">
 
   <input type="hidden" name="bn" value="PP-DonationsBF:btn_donateCC_LG.gif:NonHostedGuest">
@@ -37,8 +37,8 @@
   </form>
   </div>
 
-  <div ng-class="{'hidden':datiInviati.payment_type=='Paypal'}">  
-    Отправте банковский перевод сюда: 
+  <div ng-class="{'hidden':datiInviati.payment_type=='Paypal'}">
+    Отправте банковский перевод сюда:
     <div class="bankinfo" ng-include src="'views/bankinfo.html'"></div>
     <br>
   </div>
@@ -47,8 +47,8 @@
 	</div>
   <div class="span4" id="sidebar">
   	<div ng-include src="'views/side/ru.html'"></div>
-  	
+
 
   </div>
-  
+
 </div>
