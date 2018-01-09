@@ -2,7 +2,7 @@
 
 angular.module('angularApp')
   .controller('MainCtrl', ['$scope','$http','ServiceMsg','$cookieStore','$cookies','$location','$firebase',function ($scope, $http, ServiceMsg, $cookieStore, $cookies, $location, $firebase) {
-    
+
   	var firebaseCollectionName="lungtaDonation";
 	$scope.locLang=$location.$$url.substring(1,3);
 
@@ -19,7 +19,7 @@ angular.module('angularApp')
     var ref = new Firebase('https://gab-test1.firebaseio.com/'+firebaseCollectionName);
 	$scope.donations = $firebase(ref.limit(5000));
 	$scope.addDonation = function() {
-		
+
 		var dt = new Date();
 		var codiceTrans=$scope.dname.substring(0,1).toUpperCase()
 					   +$scope.dsurname.substring(0,1).toUpperCase()
@@ -32,7 +32,7 @@ angular.module('angularApp')
 
 		var Dati={
 			  codeTr:codiceTrans,
-	          name: $scope.dname, 
+	          name: $scope.dname,
 	          surname: $scope.dsurname,
 	          email: $scope.demail,
 	          qta: $scope.qta,
@@ -44,7 +44,7 @@ angular.module('angularApp')
 		$scope.donations.$add(Dati);
 		//$cookieStore.put("salvaDati",Dati);
 		$scope.datiInviati=Dati;
-		
+
 		ServiceMsg.setMsg(Dati);
 		$cookieStore.put('Dati', Dati);
 
@@ -52,7 +52,7 @@ angular.module('angularApp')
 	};
 
 
-	$scope.confirmDonation = function (i) {
+	$scope.confirmDonation = function (i,donation) {
         var refUpd = new Firebase('https://gab-test1.firebaseio.com/'+firebaseCollectionName+'/'+i);
         refUpd.update({confirmed:'yes'});
     };
@@ -65,12 +65,12 @@ angular.module('angularApp')
         var refDel = new Firebase('https://gab-test1.firebaseio.com/'+firebaseCollectionName+'/'+i);
         refDel.remove();
     };
-	
+
 	$scope.DataAreSaved=function(Dati){
 		$scope.showBuyThis = false;
 		var urlToGo="/"+$scope.locLang+"/tks";
 		console.log(urlToGo);
-                
+
                 $http.post('http://lungta.it/sendmail.php', Dati).
                 success(function(data, status, headers, config) {
                     console.log("- - data");
@@ -83,8 +83,8 @@ angular.module('angularApp')
                   // called asynchronously if an error occurs
                   // or server returns response with an error status.
                 });
-                
-                
+
+
 		$location.path(urlToGo);
 	};
 
@@ -98,7 +98,7 @@ angular.module('angularApp')
 	$scope.qta=1;
 	$scope.pageTitle="Lungta.it";
 
-	
+
 	$scope.range = function(n) {
 		var foo = [];
         for (var i = 1; i <= n; i++)
@@ -112,9 +112,9 @@ angular.module('angularApp')
     	{it:'Per maggiori informazioni scrivere a: <b> <a href="mailto:lungtas@shangshunguk.org">lungtas@shangshunguk.org</a> </b> '},
     	{ru:'Если Вы хотите оплатить иначе, или оплатить коллективно, пожалуйста, свяжитесь с нами: <b> <a href="mailto:lungtas@shangshunguk.org">lungtas@shangshunguk.org</a> </b> '},
     	{zh:'For more information please write to: <b> <a href="mailto:lungtas@shangshunguk.org">lungtas@shangshunguk.org</a> </b> '},
-    	
+
     	];
-    	
+
     //$scope.footerTxt=$scope.footerTxt_lang.[$scope.locLang];
 
     $scope.payment_types_en=[{name:'Pay with Paypal',value:'Paypal'},{name:'Pay with Bank Transfer',value:'Bank'}];
@@ -144,7 +144,7 @@ angular.module('angularApp')
 			url:'en/Contacts',
 		},
     ];
-    
+
     $scope.payment_types_it=[{name:'Paga con Paypal',value:'Paypal'},{name:'Paga con Bonifico',value:'Bank'}];
     $scope.pages_it = [
 		{
@@ -173,7 +173,7 @@ angular.module('angularApp')
 		},
     ];
 
-    
+
     $scope.payment_types_ru=[{name:'Paypal',value:'Paypal'},{name:'банковский перевод',value:'Bank'}];
 	$scope.pages_ru = [
 		{
@@ -242,4 +242,3 @@ angular.module('angularApp')
 		setMsg:setMsg
 	};
 }]);
-
