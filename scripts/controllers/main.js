@@ -16,8 +16,8 @@ angular.module('angularApp')
     };
 
   	//FIREBASE
-    var ref = new Firebase('https://gab-test1.firebaseio.com/'+firebaseCollectionName);
-	$scope.donations = $firebase(ref.limit(5000));
+    var ref = new Firebase('https://fundraising-mandala-2019.firebaseio.com/' + firebaseCollectionName);
+	$scope.donations = $firebase(ref.limit(5000))
 	$scope.addDonation = function() {
 
 		var dt = new Date();
@@ -53,16 +53,16 @@ angular.module('angularApp')
 
 
 	$scope.confirmDonation = function (i,donation) {
-        var refUpd = new Firebase('https://gab-test1.firebaseio.com/'+firebaseCollectionName+'/'+i);
+        var refUpd = new Firebase('https://fundraising-mandala-2019.firebaseio.com/'+firebaseCollectionName+'/'+i);
         refUpd.update({confirmed:'yes'});
     };
     $scope.unconfirmDonation = function (i) {
-        var refUpd = new Firebase('https://gab-test1.firebaseio.com/'+firebaseCollectionName+'/'+i);
+        var refUpd = new Firebase('https://fundraising-mandala-2019.firebaseio.com/'+firebaseCollectionName+'/'+i);
         refUpd.update({confirmed:'no'});
     };
 
 	$scope.removeDonation = function (i) {
-        var refDel = new Firebase('https://gab-test1.firebaseio.com/'+firebaseCollectionName+'/'+i);
+        var refDel = new Firebase('https://fundraising-mandala-2019.firebaseio.com/'+firebaseCollectionName+'/'+i);
         refDel.remove();
     };
 
