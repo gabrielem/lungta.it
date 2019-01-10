@@ -1,6 +1,6 @@
 body {
     background: #fafafa;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Helvetica", Helvetica, Arial, sans-serif;
     color: #333;
 
 }
@@ -52,14 +52,14 @@ font-weight: normal;
 
 #mainContent{}
 #mainContent h2{
-    font-family: 'Lily Script One', cursive;
+    font-family: Helvetica; /*'Lily Script One', cursive;*/
     /*font-family: 'Annie Use Your Telescope', cursive;*/
 
 }
 
 
 #sidebar{}
-#sidebar h2{font-size:25px;font-family: 'Annie Use Your Telescope', cursive;}
+#sidebar h2{font-size:25px;font-family: Helvetica; /*'Annie Use Your Telescope', cursive;*/}
 
 
 .boxBuy-show-setup, .boxBuy-hide-setup {
@@ -215,7 +215,7 @@ border-radius: 5px;
 }
 
 #footer b.tit{
-  font-family: 'Lily Script One', cursive;
+  font-family: Helvetica; /*'Lily Script One', cursive;*/
   display:block;
   font-size:18px;
   color:#0088cc;
