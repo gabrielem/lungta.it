@@ -70,7 +70,20 @@ angular.module('angularApp')
 		$scope.showBuyThis = false;
 		var urlToGo="/"+$scope.locLang+"/tks";
 		console.log(urlToGo);
-
+    /*
+    codeTr:codiceTrans,
+        name: $scope.dname,
+        surname: $scope.dsurname,
+        email: $scope.demail,
+        qta: $scope.qta,
+        lang: $scope.locLang,
+        payment_type: $scope.dpaymenttype,
+        confirmed: 'no'
+    */
+    var datiEmail = {
+      email: Dati.email,
+      message: "New Order: " + Dati.codeTr + ". " + Dati.name + " " + Dati.surname + " qta: " + Dati.qta + " lang: " + Dati.lang + " payment_type: " + Dati.payment_type + " "
+    }
                 $http.post('http://lungta.it/sendmail.php', Dati).
                 success(function(data, status, headers, config) {
                     console.log("- - data");
