@@ -84,7 +84,7 @@ angular.module('angularApp')
       email: Dati.email,
       message: "New Order: " + Dati.codeTr + ". " + Dati.name + " " + Dati.surname + " qta: " + Dati.qta + " lang: " + Dati.lang + " payment_type: " + Dati.payment_type + " "
     }
-                $http.post('http://lungta.it/sendmail.php', Dati).
+                $http.post('http://178.62.133.175/lungtamail.it/EMLcms/web/it/send/', Dati).
                 success(function(data, status, headers, config) {
                     console.log("- - data");
                     console.log(data);
