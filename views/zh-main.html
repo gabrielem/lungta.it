@@ -1,138 +1,122 @@
-
 <div ng-include src="'views/nav/zh.html'"></div>
-
 
 <div class="row">
   <div class="span8" id="mainContent">
-  	<h2>在藏历新年为您悬挂风马旗</h2>
-  	<b>在帕平圣地悬挂风马旗就能帮助我们保护西藏的语言、文化和传统。</b>
-  	<br>
-	您的风马旗将由我们为您挂在帕平，
-	<br>
-	它能使您财富增上，并将协调您在新的一年中的各个元素。
-  <br><br>
+    <h2>在藏历新年为您悬挂风马旗</h2>
+    <b>在帕平圣地悬挂风马旗就能帮助我们保护西藏的语言、文化和传统。</b>
+    <br />
+    您的风马旗将由我们为您挂在帕平，
+    <br />
+    它能使您财富增上，并将协调您在新的一年中的各个元素。
+    <br /><br />
 
-  2021 金牛年有冲突的生肖年份如下：
-<br>
-1919 土羊
-1923 水猪
-1927 火兔
-1931 金羊
-1935 木猪
-1939 土兔
-1943 水羊
-1947 火猪
-1951 金兔
-1955 木羊
-1959 土猪
-1962 水虎
-1963 水兔
-1966 火马
-1967 火羊
-1970 金狗
-1971 金猪
-1974 木虎
-1975 木兔
-1978 土马
-1979 土羊
-1982 水狗
-1983 水猪
-1986 火虎
-1987 火兔
-1990 金马
-1991 金羊
-1994 木狗
-1995 木猪
-1998 土虎
-1999 土兔
-2002 水马
-2003 水羊
-2006 火狗
-2007 火猪
-2010 金虎
-2011 金兔
-2014 木马
-2015 木羊
-2018 土狗
-2019 土猪
+    2022 金牛年有冲突的生肖年份如下：
+    <br />
+    1919 土羊 1923 水猪 1927 火兔 1931 金羊 1935 木猪 1939 土兔 1943 水羊 1947
+    火猪 1951 金兔 1955 木羊 1959 土猪 1962 水虎 1963 水兔 1966 火马 1967 火羊
+    1970 金狗 1971 金猪 1974 木虎 1975 木兔 1978 土马 1979 土羊 1982 水狗 1983
+    水猪 1986 火虎 1987 火兔 1990 金马 1991 金羊 1994 木狗 1995 木猪 1998 土虎
+    1999 土兔 2002 水马 2003 水羊 2006 火狗 2007 火猪 2010 金虎 2011 金兔 2014
+    木马 2015 木羊 2018 土狗 2019 土猪
 
+    <br /><br />
+    每套风马旗5 英镑
+    <br />
+    （一套有五个风马旗，传统上要悬挂与您年龄数目相符的风马旗）。
 
-	<br><br>
-	每套风马旗5 英镑
-	<br>
-	（一套有五个风马旗，传统上要悬挂与您年龄数目相符的风马旗）。
+    <br /><br />
+    <button
+      ng-show="!showBuyThis"
+      class="btn btn-large btn-primary"
+      type="button"
+      ng-click="showBuyThis = ! showBuyThis"
+    >
+      <i class="icon-shopping-cart icon-white"></i> 现在就购买！
+    </button>
+    <br /><br />
 
-	<br><br>
-	<button  ng-show="!showBuyThis" class="btn btn-large btn-primary" type="button" ng-click="showBuyThis = ! showBuyThis">
-		<i class="icon-shopping-cart icon-white"></i> 现在就购买！
-	</button>
-	<br><br>
+    <div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
+      <i class="close" ng-click="showBuyThis = ! showBuyThis">close</i>
+      <br />
+      <div class="product">
+        Please,<br />
+        Select the number of Lungta's<br />
+        you wish to purchase (1 pack = 5 flags)
+        <br />
+        <select type="text" ng-model="qta">
+          <option
+            ng-repeat="n in range(50)"
+            ng-selected="$index==0"
+            value="{{$index+1}}"
+          >
+            {{$index+1}} pack
+          </option>
+        </select>
+        <span class="total">{{qta*5}} Pounds</span>
 
+        <form ng-submit="addDonation()">
+          <div id="datiDonatore">
+            <div class="riga">
+              <div class="txt">Name</div>
+              <div class="field">
+                <input class="dati" type="text" required ng-model="dname" />
+              </div>
+              <div style="clear: both"></div>
+            </div>
 
+            <div class="riga">
+              <div class="txt">Surname</div>
+              <div class="field">
+                <input class="dati" type="text" required ng-model="dsurname" />
+              </div>
+              <div style="clear: both"></div>
+            </div>
 
-	<div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
-		<i class="close" ng-click="showBuyThis = ! showBuyThis">close</i>
-		<br>
-		<div class="product">
-			Please,<br>
-			Select the number of Lungta's<br>
-			you wish to purchase (1 pack = 5 flags)
-			<br>
-		<select type="text" ng-model="qta">
-			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}} pack</option>
+            <div class="riga">
+              <div class="txt">E-mail</div>
+              <div class="field">
+                <input class="dati" type="email" required ng-model="demail" />
+              </div>
+              <div style="clear: both"></div>
+            </div>
 
-		</select>
-		<span class="total">{{qta*5}} Pounds</span>
+            <div class="riga">
+              <select type="text" ng-model="dpaymenttype">
+                <option
+                  ng-repeat="payment in payment_types_en"
+                  ng-selected="$index==0"
+                  value="{{payment.value}}"
+                >
+                  {{payment.name}}
+                </option>
+              </select>
+            </div>
+            * Fill in all the fileds
+          </div>
 
-			<form ng-submit="addDonation()">
-			<div id="datiDonatore">
-				<div class="riga">
-					<div class="txt">Name</div>
-					<div class="field"><input class="dati" type="text" required ng-model="dname"></div>
-					<div style="clear:both;"></div>
-				</div>
+          <div>
+            <button
+              type="submit"
+              class="btn btn-large btn-primary"
+              type="button"
+              ng-click="doBuy"
+            >
+              <i class="icon-shopping-cart icon-white"></i> Click to Donate!
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
-				<div class="riga">
-					<div class="txt">Surname</div>
-					<div class="field"><input class="dati" type="text" required ng-model="dsurname"></div>
-					<div style="clear:both;"></div>
-				</div>
-
-				<div class="riga">
-					<div class="txt">E-mail</div>
-					<div class="field"><input class="dati" type="email" required ng-model="demail"></div>
-					<div style="clear:both;"></div>
-				</div>
-
-				<div class="riga">
-					<select type="text" ng-model="dpaymenttype">
-						<option ng-repeat="payment in payment_types_en" ng-selected="$index==0" value="{{payment.value}}">{{payment.name}}</option>
-
-					</select>
-				</div>
-				* Fill in all the fileds
-			</div>
-
-			<div>
-				<button type="submit"  class="btn btn-large btn-primary" type="button" ng-click="doBuy">
-				<i class="icon-shopping-cart icon-white"></i> Click to Donate!
-				</button>
-			</div>
-			</form>
-
-		</div>
-	</div>
-
-
-<!--
+    <!--
 买风马旗，您就资助了英国象雄学院珍稀艺术项目
 -->
-	<br><br>
-<!--
+    <br /><br />
+    <!--
 <h2>Shang Shung UK Rare Art Project</h2>
 	<p>英国象雄学院正在为最上乘的西藏与尼泊尔尼瓦里艺术而开发的“珍稀艺术项目”而制作纪录片。影片将由世界级的摄影师及纪录片制作人克莱夫·爱若史密斯完成。他与西藏和尼瓦里艺术的一位权威专家罗伯特·比尔在工作上交往甚密。罗伯特多年来从尼泊尔最有威望的画家那里收集到了极为丰富的上乘尼瓦里艺术收藏品。纪录片还将拍摄尼泊尔艺术家们的作品完成过程。罗伯特·比尔不仅因他的唐卡而闻名，他还撰写了《西藏象征符号与图案百科全书》。该书是这个领域最权威的著作之一，读者包括西藏人和西方艺术家们。他因其专业知识在尼泊尔享有盛名，经常有尼泊尔和西藏的艺术家向他征求意见，希望能提供指导。</p>
 -->
-<!--
+    <!--
 <h2>Shang Shung Institute UK Tibetan Language Project</h2>
 文化的基础是语言。但现在，藏族文化正饱受威胁，包括藏语本身。由于地方的教育政策，西藏的年轻人被迫学习所谓更“实用”的其他语言。那些组成了西藏文化核心的丰富传统文字正被忽视。为了子孙后代，我们要保护藏族人的身份，而藏族文字起着至关重要的作用。成千上万本藏传佛教书籍，许多还未被翻译过，也为这个世界提供着非常宝贵的精神财富。
 <br><br>
@@ -141,29 +125,27 @@
 买上您的风马旗，助佛法繁荣！
     -->
 
-	<br><br>
+    <br /><br />
 
-
-
-<!--
+    <!--
 	<br><br><br>
   	<h2>Help us to maintain the language, culture and customs of Tibet</h2>
 -->
 
-<br>
-<img src="images/home.jpg" style="">
-<br><br>
-<!--
+    <br />
+    <img src="images/home.jpg" style="" />
+    <br /><br />
+    <!--
 <a href="http://www.shangshunguk.org/whats-on/#event=21075989" target="_blank">
   <img src="images/home2.jpg" style="">
 </a>
 -->
-<br><br>
-<!--
+    <br /><br />
+    <!--
 <img src="images/home.jpg" style="max-width: 300px;float:left;margin:5px 10px 0 0;">
 Historically, the hoisting of prayer flags to guarantee good fortune was an event that occurred within the nomadic communities of Tibet, however, this ritual effort has shifted in meaning by having assumed a more religious significance. The design of the flags also endured change as a more religious significance was acquired including the appearance of mantras and images. Auspicious symbols and images of four creatures of significant symbolic value (a garuda, a dragon, a snow lion and a tiger), along with the symbol of good fortune-- theWind horse-- are placed amongst the traditional texts of prayers, invocations and mantras. As the flags are hung, the writings and wishes that are inscribed upon the flag are said to be carried everywhere by the wind, blessings all sentient beings. You can buy as many lungtas as you want, but usually people buy the same number of flags as their years of age.
 -->
-<!--
+    <!--
 <br><br>
 
 <b>By Purchasing Lungtas, you are Supporting the Shang Shung Institute UK  Rare Art Project</b>
@@ -173,17 +155,9 @@ preserving the highest quality and rare Tibetan and Nepalese Newari art. Find ou
 <br>
 -->
 
-
-  	<br><br>
-
-
-
-
+    <br /><br />
   </div>
   <div class="span4" id="sidebar">
-  	<div ng-include src="'views/side/zh.html'"></div>
-
-
+    <div ng-include src="'views/side/zh.html'"></div>
   </div>
-
 </div>

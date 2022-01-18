@@ -1,93 +1,132 @@
-
 <div ng-include src="'views/nav/it.html'"></div>
-
 
 <div class="row">
   <div class="span8" id="mainContent">
-	<h2>Issa le tue bandierine Lungta per il nuovo anno Tibetano.</h2>
+    <h2>Issa le tue bandierine Lungta per il nuovo anno Tibetano.</h2>
 
-	<b>Aiutaci a mantenere in vita la lingua, cultura e tradizioni del Tibet issando lungta nel luogo sacro di Pharping.</b>
-	<br><br>
+    <b
+      >Aiutaci a mantenere in vita la lingua, cultura e tradizioni del Tibet
+      issando lungta nel luogo sacro di Pharping.</b
+    >
+    <br /><br />
 
-	Le bandierine di preghiera saranno messe a Pharping,<br>
-	per portarti fortuna ed armonizzare<br>
-	i tuoi elementi con quelli dell’anno nuovo.
+    Le bandierine di preghiera saranno messe a Pharping,<br />
+    per portarti fortuna ed armonizzare<br />
+    i tuoi elementi con quelli dell’anno nuovo.
 
-  <br><br>
+    <br /><br />
 
-  Anni di nascita con elementi in conflitto con quelli dell'anno di Bue di Metallo del 2021:
-  <br>
-  Pecora di terra 1919, Cinghiale Acqua 1923, Coniglio fuoco 1927, Pecora metallo 1931, Cinghiale Legno 1935, Coniglio Terra 1939, Pecora Acqua 1943, Cinghiale Fuoco 1947, Coniglio Metallo 1951, Pecora Legno 1955, Cinghiale Terra 1959, Tigre Acqua 1962, Coniglio Acqua 1963, Cavallo Fuoco 1966, Pecora Fuoco 1967, Cane Metallo 1970, Maiale Metallo 1971, Tigre Legno 1974, Coniglio Legno 1975, Cavallo Terra 1978, Pecora Terra 1979, Cane Acqua 1982, Cinghiale Acqua 1983, Tigre Fuoco 1986, Coniglio Fuoco 1987, Cavallo Metallo 1990, Pecora Metallo 1991, Cane Legno 1994, Maiale Terra 1995, Tigre Terra 1998, Coniglio Terra 1999, Cavallo Acqua 2002, Pecora Acqua 2003, Cane Fuoco 2006, Cinghiale Fuoco 2007, Tigre Metallo 2010, Coniglio Metallo 2011, Cavallo Legno 2014, Pecora Legno 2015, Cane Terra 2018, Cinghiale Terra 2019.
+    Anni di nascita con elementi in conflitto con quelli dell'anno di Bue di
+    Metallo del 2022:
+    <br />
+    Pecora di terra 1919, Cinghiale Acqua 1923, Coniglio fuoco 1927, Pecora
+    metallo 1931, Cinghiale Legno 1935, Coniglio Terra 1939, Pecora Acqua 1943,
+    Cinghiale Fuoco 1947, Coniglio Metallo 1951, Pecora Legno 1955, Cinghiale
+    Terra 1959, Tigre Acqua 1962, Coniglio Acqua 1963, Cavallo Fuoco 1966,
+    Pecora Fuoco 1967, Cane Metallo 1970, Maiale Metallo 1971, Tigre Legno 1974,
+    Coniglio Legno 1975, Cavallo Terra 1978, Pecora Terra 1979, Cane Acqua 1982,
+    Cinghiale Acqua 1983, Tigre Fuoco 1986, Coniglio Fuoco 1987, Cavallo Metallo
+    1990, Pecora Metallo 1991, Cane Legno 1994, Maiale Terra 1995, Tigre Terra
+    1998, Coniglio Terra 1999, Cavallo Acqua 2002, Pecora Acqua 2003, Cane Fuoco
+    2006, Cinghiale Fuoco 2007, Tigre Metallo 2010, Coniglio Metallo 2011,
+    Cavallo Legno 2014, Pecora Legno 2015, Cane Terra 2018, Cinghiale Terra
+    2019.
 
-	<br><br>
-	Costo: 5 sterline per ogni set di Lungta
-	<br>
-	(un set consiste di 5 bandierine, tradizionalmente si issa il numero di lungta equivalente alla propria eta’).
-	<br><br>
-	<button  ng-show="!showBuyThis" class="btn btn-large btn-primary" type="button" ng-click="showBuyThis = ! showBuyThis">
-		<i class="icon-shopping-cart icon-white"></i> Dona ora!
-	</button>
+    <br /><br />
+    Costo: 5 sterline per ogni set di Lungta
+    <br />
+    (un set consiste di 5 bandierine, tradizionalmente si issa il numero di lungta
+    equivalente alla propria eta’).
+    <br /><br />
+    <button
+      ng-show="!showBuyThis"
+      class="btn btn-large btn-primary"
+      type="button"
+      ng-click="showBuyThis = ! showBuyThis"
+    >
+      <i class="icon-shopping-cart icon-white"></i> Dona ora!
+    </button>
 
-	<div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
-		<i class="close" ng-click="showBuyThis = ! showBuyThis">chiudi</i>
-		<br>
-		<div class="product">
-			Bene,<br>
-			Imposta il numero di Lungta che vuoi<br>
-			e completa la tua donazione.
-			<br>
-		<select type="text" ng-model="qta" name="qtaFlag">
-			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}}</option>
+    <div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
+      <i class="close" ng-click="showBuyThis = ! showBuyThis">chiudi</i>
+      <br />
+      <div class="product">
+        Bene,<br />
+        Imposta il numero di Lungta che vuoi<br />
+        e completa la tua donazione.
+        <br />
+        <select type="text" ng-model="qta" name="qtaFlag">
+          <option
+            ng-repeat="n in range(50)"
+            ng-selected="$index==0"
+            value="{{$index+1}}"
+          >
+            {{$index+1}}
+          </option>
+        </select>
+        <span class="total">{{qta*5}} sterline</span>
 
-		</select>
-		<span class="total">{{qta*5}} sterline</span>
+        <form ng-submit="addDonation()">
+          <div id="datiDonatore">
+            <div class="riga">
+              <div class="txt">Nome</div>
+              <div class="field">
+                <input class="dati" type="text" required ng-model="dname" />
+              </div>
+              <div style="clear: both"></div>
+            </div>
 
-			<form ng-submit="addDonation()">
-			<div id="datiDonatore">
-				<div class="riga">
-					<div class="txt">Nome</div>
-					<div class="field"><input class="dati" type="text" required ng-model="dname"></div>
-					<div style="clear:both;"></div>
-				</div>
+            <div class="riga">
+              <div class="txt">Cognome</div>
+              <div class="field">
+                <input class="dati" type="text" required ng-model="dsurname" />
+              </div>
+              <div style="clear: both"></div>
+            </div>
 
-				<div class="riga">
-					<div class="txt">Cognome</div>
-					<div class="field"><input class="dati" type="text" required ng-model="dsurname"></div>
-					<div style="clear:both;"></div>
-				</div>
+            <div class="riga">
+              <div class="txt">E-mail</div>
+              <div class="field">
+                <input class="dati" type="email" required ng-model="demail" />
+              </div>
+              <div style="clear: both"></div>
+            </div>
 
-				<div class="riga">
-					<div class="txt">E-mail</div>
-					<div class="field"><input class="dati" type="email" required  ng-model="demail"></div>
-					<div style="clear:both;"></div>
-				</div>
+            <div class="riga">
+              <select type="text" ng-model="dpaymenttype">
+                <option
+                  ng-repeat="payment in payment_types_it"
+                  ng-selected="$index==0"
+                  value="{{payment.value}}"
+                >
+                  {{payment.name}}
+                </option>
+              </select>
+            </div>
+            * Compila tutti i campi
+          </div>
 
-				<div class="riga">
-					<select type="text" ng-model="dpaymenttype">
-						<option ng-repeat="payment in payment_types_it" ng-selected="$index==0" value="{{payment.value}}">{{payment.name}}</option>
+          <div>
+            <button
+              type="submit"
+              class="btn btn-large btn-primary"
+              type="button"
+              ng-click="doBuy"
+            >
+              <i class="icon-shopping-cart icon-white"></i> Acquista ora!
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
-					</select>
-				</div>
-				* Compila tutti i campi
-			</div>
-
-			<div>
-				<button type="submit"  class="btn btn-large btn-primary" type="button" ng-click="doBuy">
-				<i class="icon-shopping-cart icon-white"></i> Acquista ora!
-				</button>
-			</div>
-			</form>
-
-		</div>
-	</div>
-
-<!--
+    <!--
 <br><br>
 Acquistando le lungta stai sostenendo il Progetto Arte Rara dell’Istituto Shang Shung del Regno Unito.
 -->
-	<br><br>
+    <br /><br />
 
-<!--
+    <!--
 <h2>Progetto Arte Rara</h2>
 	<p>
 	<b>L’istituto Shang Shung del Regno Unito sta documentando pezzi di arte storica, Tibetana e Newari di primissima qualita’. Le riprese saranno eseguite dal rinomato fotografo e regista</b>
@@ -104,7 +143,7 @@ Acquistando le lungta stai sostenendo il Progetto Arte Rara dell’Isti
 	consulenza da parte di artisti sia tibetani che nepalesi.
 	</p>
 -->
-<!--
+    <!--
 <h2>Shang Shung Institute UK Tibetan Language Project</h2>
 La lingua e' la vera base di una cultura. Oggi non solo la cultura tibetana e' minacciata, ma lo e' il linguaggio stesso, a causa di politiche educative statali, e i giovani tibetani vengono forzati a optare per lo studio di linguaggi commercialmente validi. La vasta tradizione letteraria, costituente il vero centro della cultura tibetana,  e' trascurata, ma e' essenziale per preservare l'identita' del popolo tibetano, a beneficio delle future generazioni. Le migliaia di testi di Buddhismo Tibetano, molti dei quali devono essere ancora tradotti, rappresentano inoltre un importante tesoro spirituale per il resto del mondo.
 <br><br>
@@ -113,24 +152,18 @@ Puoi aiutare a preservare il linguaggio Tibetano attraverso l'istituto Shang Shu
 Comprate le vostre lungta adesso e aiutate il Dharma a  prosperare!
 -->
 
-<br><br><br>
-<img src="images/home.jpg" style="">
-<br><br>
-<!--
+    <br /><br /><br />
+    <img src="images/home.jpg" style="" />
+    <br /><br />
+    <!--
 <a href="http://www.shangshunguk.org/whats-on/#event=21075989" target="_blank">
   <img src="images/home2.jpg" style="">
 </a>
 -->
 
-<br><br>
-
-
-
+    <br /><br />
   </div>
   <div class="span4" id="sidebar">
-  	<div ng-include src="'views/side/it.html'"></div>
-
-
+    <div ng-include src="'views/side/it.html'"></div>
   </div>
-
 </div>

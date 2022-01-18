@@ -1,108 +1,145 @@
-
 <div ng-include src="'views/nav/en.html'"></div>
-
 
 <div class="row">
   <div class="span8" id="mainContent">
-  	<h2>Hang your Lungta Flags for the Tibetan New Year</h2>
-  	<b>
-      Hang your lungtas in the sacred place of Pharping and help us maintain and propagate Tibetan culture and traditions.
+    <h2>Hang your Lungta Flags for the Tibetan New Year</h2>
+    <b>
+      Hang your lungtas in the sacred place of Pharping and help us maintain and
+      propagate Tibetan culture and traditions.
     </b>
-  	<br>
+    <br />
     Your flags will be hung by us in Pharping,
-	<br>
-  bringing you good fortune and coordinating
-	<br>
-  your elements with those of the New Year.
-	<br><br>
-  Cost: 5 pounds per set of Lungta flags
-	<br>
-  (One set is made up of 5 flags, it is customary to hang the number of Lungta corresponding to your age).
-  <br><br><br>
+    <br />
+    bringing you good fortune and coordinating
+    <br />
+    your elements with those of the New Year.
+    <br /><br />
+    Cost: 5 pounds per set of Lungta flags
+    <br />
+    (One set is made up of 5 flags, it is customary to hang the number of Lungta
+    corresponding to your age).
+    <br /><br /><br />
 
-  Specific years that have conflicts with the Year of the Iron Ox 2021:
-  <br>
-  1919 Earth Sheep, 1923 Water Pig, 1927 Fire Rabbit, 1931 Metal Sheep, 1935 Wood Pig, 1939 Earth Rabbit, 1943 Water Sheep, 1947 Fire Pig, 1951 Metal Rabbit, 1955 Wood Sheep, 1959 Earth Pig, 1962 Water Tiger, 1963 Water Hare, 1966 Fire Horse, 1967 Fire Sheep, 1970 Metal Dog, 1971 Metal Pig, 1974 Wood Tiger, 1975 Wood Hare, 1978 Earth Horse, 1979 Earth Sheep, 1982 Water Dog, 1983 Water Pig, Fire Tiger 1986, 1987 Fire Hare, 1990 Metal Horse, 1991 Metal Sheep, 1994 Wood Dog, 1995 Wood Pig, 1998 Earth Tiger, 1999 Earth Hare, 2002 Water Horse, 2003 Water Sheep, 2006 Fire Dog, 2007 Fire Pig, 2010 Metal Tiger, 2011 Metal Hare, 2014 Wood Horse, 2015 Wood Sheep, 2018 Earth Dog, 2019 Earth Pig
+    Specific years that have conflicts with the Year of the Iron Ox 2022:
+    <br />
+    1919 Earth Sheep, 1923 Water Pig, 1927 Fire Rabbit, 1931 Metal Sheep, 1935
+    Wood Pig, 1939 Earth Rabbit, 1943 Water Sheep, 1947 Fire Pig, 1951 Metal
+    Rabbit, 1955 Wood Sheep, 1959 Earth Pig, 1962 Water Tiger, 1963 Water Hare,
+    1966 Fire Horse, 1967 Fire Sheep, 1970 Metal Dog, 1971 Metal Pig, 1974 Wood
+    Tiger, 1975 Wood Hare, 1978 Earth Horse, 1979 Earth Sheep, 1982 Water Dog,
+    1983 Water Pig, Fire Tiger 1986, 1987 Fire Hare, 1990 Metal Horse, 1991
+    Metal Sheep, 1994 Wood Dog, 1995 Wood Pig, 1998 Earth Tiger, 1999 Earth
+    Hare, 2002 Water Horse, 2003 Water Sheep, 2006 Fire Dog, 2007 Fire Pig, 2010
+    Metal Tiger, 2011 Metal Hare, 2014 Wood Horse, 2015 Wood Sheep, 2018 Earth
+    Dog, 2019 Earth Pig
 
-  <br><br><br>
+    <br /><br /><br />
 
-  By buying Lungtas you are supporting the cultural activities of the Shang Shung Institute UK, London Institute of Tibetan Studies.
-  To see the list of our past activities please
-  <a href="https://www.shangshunguk.org/v3_wp/wp-content/uploads/2020/05/SSIUK_Report_2010-2020_FINAL.pdf" target="_blank">CLICK HERE</a>.
+    By buying Lungtas you are supporting the cultural activities of the Shang
+    Shung Institute UK, London Institute of Tibetan Studies. To see the list of
+    our past activities please
+    <a
+      href="https://www.shangshunguk.org/v3_wp/wp-content/uploads/2020/05/SSIUK_Report_2010-2020_FINAL.pdf"
+      target="_blank"
+      >CLICK HERE</a
+    >.
 
-	<br><br>
-	<button  ng-show="!showBuyThis" class="btn btn-large btn-primary" type="button" ng-click="showBuyThis = ! showBuyThis">
-		<i class="icon-shopping-cart icon-white"></i> Buy Now!
-	</button>
-	<br><br>
+    <br /><br />
+    <button
+      ng-show="!showBuyThis"
+      class="btn btn-large btn-primary"
+      type="button"
+      ng-click="showBuyThis = ! showBuyThis"
+    >
+      <i class="icon-shopping-cart icon-white"></i> Buy Now!
+    </button>
+    <br /><br />
 
+    <div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
+      <i class="close" ng-click="showBuyThis = ! showBuyThis">close</i>
+      <br />
+      <div class="product">
+        Please,<br />
+        Select the number of Lungta's<br />
+        you wish to purchase (1 pack = 5 flags)
+        <br />
+        <select type="text" ng-model="qta">
+          <option
+            ng-repeat="n in range(50)"
+            ng-selected="$index==0"
+            value="{{$index+1}}"
+          >
+            {{$index+1}} pack
+          </option>
+        </select>
+        <span class="total">{{qta*5}} Pounds</span>
 
+        <form ng-submit="addDonation()">
+          <div id="datiDonatore">
+            <div class="riga">
+              <div class="txt">Name</div>
+              <div class="field">
+                <input class="dati" type="text" required ng-model="dname" />
+              </div>
+              <div style="clear: both"></div>
+            </div>
 
-	<div ng-show="showBuyThis" ng-animate="'boxBuy'" id="cartMini">
-		<i class="close" ng-click="showBuyThis = ! showBuyThis">close</i>
-		<br>
-		<div class="product">
-			Please,<br>
-			Select the number of Lungta's<br>
-			you wish to purchase (1 pack = 5 flags)
-			<br>
-		<select type="text" ng-model="qta">
-			<option ng-repeat="n in range(50)" ng-selected="$index==0" value="{{$index+1}}">{{$index+1}} pack</option>
+            <div class="riga">
+              <div class="txt">Surname</div>
+              <div class="field">
+                <input class="dati" type="text" required ng-model="dsurname" />
+              </div>
+              <div style="clear: both"></div>
+            </div>
 
-		</select>
-		<span class="total">{{qta*5}} Pounds</span>
+            <div class="riga">
+              <div class="txt">E-mail</div>
+              <div class="field">
+                <input class="dati" type="email" required ng-model="demail" />
+              </div>
+              <div style="clear: both"></div>
+            </div>
 
-			<form ng-submit="addDonation()">
-			<div id="datiDonatore">
-				<div class="riga">
-					<div class="txt">Name</div>
-					<div class="field"><input class="dati" type="text" required ng-model="dname"></div>
-					<div style="clear:both;"></div>
-				</div>
+            <div class="riga">
+              <select type="text" ng-model="dpaymenttype">
+                <option
+                  ng-repeat="payment in payment_types_en"
+                  ng-selected="$index==0"
+                  value="{{payment.value}}"
+                >
+                  {{payment.name}}
+                </option>
+              </select>
+            </div>
+            * Fill in all the fileds
+          </div>
 
-				<div class="riga">
-					<div class="txt">Surname</div>
-					<div class="field"><input class="dati" type="text" required ng-model="dsurname"></div>
-					<div style="clear:both;"></div>
-				</div>
+          <div>
+            <button
+              type="submit"
+              class="btn btn-large btn-primary"
+              type="button"
+              ng-click="doBuy"
+            >
+              <i class="icon-shopping-cart icon-white"></i> Click to Donate!
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
 
-				<div class="riga">
-					<div class="txt">E-mail</div>
-					<div class="field"><input class="dati" type="email" required ng-model="demail"></div>
-					<div style="clear:both;"></div>
-				</div>
-
-				<div class="riga">
-					<select type="text" ng-model="dpaymenttype">
-						<option ng-repeat="payment in payment_types_en" ng-selected="$index==0" value="{{payment.value}}">{{payment.name}}</option>
-
-					</select>
-				</div>
-				* Fill in all the fileds
-			</div>
-
-			<div>
-				<button type="submit"  class="btn btn-large btn-primary" type="button" ng-click="doBuy">
-				<i class="icon-shopping-cart icon-white"></i> Click to Donate!
-				</button>
-			</div>
-			</form>
-
-		</div>
-	</div>
-
-
-<!-- 2014
+    <!-- 2014
 By buying Lungtas you are supporting the Shang Shung Institute UK Rare Art Project.
 -->
-By buying Lungtas you are supporting the cultural activities of the Shang Shung Institute UK, London Institute of Tibetan Studies.
-	<br><br>
+    By buying Lungtas you are supporting the cultural activities of the Shang
+    Shung Institute UK, London Institute of Tibetan Studies.
+    <br /><br />
 
-<!-- 2014
+    <!-- 2014
 <h2>Shang Shung UK Rare Art Project</h2>
 	<p>The Shang Shung Institute UK is documenting a Rare Art Project of the highest quality Tibetan and Nepalese Newari art. Filming will be done by Clive Arrowsmith, a world class photographer and documentary film maker, working very closely with Robert Beer, one of the leading experts on Tibetan and Newari art. Robert also has the most extensive collection of superb Newari art, collected over many years from the most accomplished painters in Nepal. There will also be filming of the artists at work in Nepal through the progress of their work. Robert Beer is not only known for his thangka painting but also wrote The Encylopaedia of Tibetan symbols and Motifs, one of the most authoritative works on the subject, used both by Tibetan and Western artists. In Nepal he is very highly thought of for his expertise and knowledge and is much sought after by the Nepalese and Tibetan artists for his advice and guidance. </p>
 -->
-<!--
+    <!--
 <h2>Shang Shung Institute UK Tibetan Language Project</h2>
 
 Language is the very basis of a culture.
@@ -124,28 +161,26 @@ to access the online platform and learn some Tibetan!
 Buy your lungtas now and help the Dharma flourish!
 -->
 
-	<br><br>
+    <br /><br />
 
-
-
-<!--
+    <!--
 	<br><br><br>
   	<h2>Help us to maintain the language, culture and customs of Tibet</h2>
 -->
 
-<br>
-<img src="images/home.jpg" style="">
-<br><br>
-<!-- <a href="http://www.shangshunguk.org/whats-on/#event=21075989" target="_blank">
+    <br />
+    <img src="images/home.jpg" style="" />
+    <br /><br />
+    <!-- <a href="http://www.shangshunguk.org/whats-on/#event=21075989" target="_blank">
   <img src="images/home2.jpg" style="">
 </a> -->
-<br><br>
+    <br /><br />
 
-<!--
+    <!--
 <img src="images/home.jpg" style="max-width: 300px;float:left;margin:5px 10px 0 0;">
 Historically, the hoisting of prayer flags to guarantee good fortune was an event that occurred within the nomadic communities of Tibet, however, this ritual effort has shifted in meaning by having assumed a more religious significance. The design of the flags also endured change as a more religious significance was acquired including the appearance of mantras and images. Auspicious symbols and images of four creatures of significant symbolic value (a garuda, a dragon, a snow lion and a tiger), along with the symbol of good fortune-- theWind horse-- are placed amongst the traditional texts of prayers, invocations and mantras. As the flags are hung, the writings and wishes that are inscribed upon the flag are said to be carried everywhere by the wind, blessings all sentient beings. You can buy as many lungtas as you want, but usually people buy the same number of flags as their years of age.
 -->
-<!--
+    <!--
 <br><br>
 
 <b>By Purchasing Lungtas, you are Supporting the Shang Shung Institute UK  Rare Art Project</b>
@@ -155,17 +190,9 @@ preserving the highest quality and rare Tibetan and Nepalese Newari art. Find ou
 <br>
 -->
 
-
-  	<br><br>
-
-
-
-
+    <br /><br />
   </div>
   <div class="span4" id="sidebar">
-  	<div ng-include src="'views/side/en.html'"></div>
-
-
+    <div ng-include src="'views/side/en.html'"></div>
   </div>
-
 </div>
